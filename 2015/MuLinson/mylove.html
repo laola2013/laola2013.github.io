@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style/css4.css">
+             <script type="text/javascript">
+		window.onload = function(){
+		var container = document.getElementById('container');
+		var list = document.getElementById('list');
+		var buttons = document.getElementById('buttons').getElementsByTagName('span');
+		var pre = document.getElementById('pre');
+		var next = document.getElementById('next');
+		var index = 1;
+		var animated = false;
+		var timer;
+
+			function showButton(){
+				for (var i = 0;i < buttons.length; i++) {
+					if(buttons[i].className == 'on'){
+					buttons[i].className = '';
+				}
+			}
+            buttons[index-1].className = 'on';
+		}
+
+		function animate(offset){
+	        animated = true;
+			var newleft = parseInt(list.style.left) + offset;
+			var time = 300;
+			var interval = 15;
+			var speed = offset/(time/interval);
+
+			function go(){
+				if( (speed < 0 && parseInt(list.style.left) > newleft) || 
+					(speed > 0 && parseInt(list.style.left) < newleft) ){
+					list.style.left = parseInt(list.style.left) + speed + 'px';
+					setTimeout(go,interval);
+				}
+				else{
+					animated = false;
+					list.style.left = newleft +'px';
+					if (newleft > -500) {
+					    list.style.left = -3500 +'px';
+			        }
+			        if (newleft < -3500) {
+				        list.style.left = -500 +'px';
+			        }
+
+				}
+			}
+
+			go();
+		}
+
+            function play() {
+                timer = setInterval(function () {
+                    next.onclick();
+                    
+                }, 3000);
+            }
+
+            function stop() {
+                clearInterval(timer);
+            }
+
+		next.onclick = function(){
+			if(index == 7){
+				index = 1;
+			}
+			else {
+				index += 1;
+			}
+			showButton();
+			if(animated == false){
+			animate(-500);
+			}
+		}
+
+		pre.onclick = function(){
+			if(index == 1){
+				index = 7;
+			}
+			else {
+				index -= 1;
+			}
+			
+			showButton();
+			if(animated == false){
+				animate(500);
+			}
+		}
+		for(var i = 0;i<buttons.length;i++){
+
+			buttons[i].onclick = function (){
+				if(this.className == 'on'){
+					return;
+				}
+				var myIndex = parseInt(this.getAttribute('index'));
+				var offset = -500 * (myIndex - index);
+
+				animate(offset);
+				index = myIndex;
+				showButton();
+				if(animated == false){
+					animate(offset);
+				}
+			}
+		}
+		container.onmouseover = stop;
+		container.onmouseout = play;
+        play();
+
+        var btn = document.getElementById('btn');
+        var pic = document.getElementById('pic');
+        btn.onclick = function(){
+        	// pic.style.display='none';
+            // 下面的方法比较推荐使用，在很多时候可以避免大量的代码
+           pic.className='hide'; 
+        }
+	}
+		
+	</script>
+	</html>
+	</head>
+	<body>
+		<div class="header-nav">
+		        <div class="nav-name">
+				     Mrs.MuLinSon...<span><木林森小姐></span>
+				</div>
+				<div class="pho">
+				     <img src="img/1.jpg" class="nav-pho">
+				</div>
+		</div>
+<div class="box-bg">
+	<div class="box">
+		<div class="box1">
+			<div class="box-pho">
+				<img src="img/4.jpg" style="width:100%">
+			</div>
+				<div class="box-title">
+				     <p>Mrs.MuLinSon</p>
+				</div>
+			<div class="box-nav">
+				<ul>
+				    <li><a href="mulinson.html">主打之歌</a></li>
+				    <li><a href="myself.html">我的自己</a></li>
+					<li><a href="photos.html" target="_blank">画丫画丫</a></li>
+					<li class="active nav"><a href="##">成长轨迹</a></li>
+					<li><a href="saying.html">喃喃自语</a></li>
+					<li><a href="we.html">我和Ta们</a></li>
+					<li><a href="heart.html" target="_blank">我说他说</a></li>
+				</ul>
+			</div>
+		
+		</div>
+	 	    <div class="box2">
+				<form class="form">
+				<ul>
+					<li>我将自己种进花盆</li>
+					<li>假装是一朵花</li>
+					<li>城市巷弄阴暗</li>
+					<li>阳光终日短缺</li>
+					<li>雨水不足空气混浊</li>
+					<li>只有在午夜三分时</li>
+					<li>才能瞥见月亮默默滑过天空</li>
+					<li>我是一朵不开花的花</li>
+					<li>尚未学会绽放，就已习于凋零</li>
+					<br>
+					<li>--------------------------</li>
+					<br>
+					<li>星期天的下午，风在吹，我睡着了。。。</li>
+					<li>白色的窗帘，轻轻的飘起来</li>
+					<li>毛毛兔来了，在窗外吹着口哨呼唤我</li>
+					<li>推开门，森林好安静，阳光好温柔</li>
+					<li>没有在森林里游荡了好久好久。。。</li>
+					<br>
+					<li>--------------------------</li>
+                    <br>
+				</ul>
+				</form>
+			</div> 
+
+			<div id="container">
+				<div id="list" style="left:-500px">
+				    <img src="img/13.jpg">
+					<img src="img/21.jpg">
+					<img src="img/16.jpg">
+					<img src="img/19.jpg">
+					<img src="img/25.jpg">
+					<img src="img/20.jpg">
+					<img src="img/22.jpg">
+					<img src="img/13.jpg">
+                    <img src="img/21.jpg">
+				</div>
+				<div id="buttons">
+					<span index="1" class="on"></span>
+					<span index="2"></span>
+					<span index="3"></span>
+					<span index="4"></span>
+					<span index="5"></span>
+					<span index="6"></span>
+					<span index="7"></span>
+				</div>
+				<a href="javascript:;" class="arrow" id="pre">&lt</a>
+				<a href="javascript:;" class="arrow" id="next">&gt</a>
+			</div>
+		<div class="box2-text">
+			<form>
+				<ul>
+					<li>为何鱼只要有一种表情就可以面对世界?为何我却不能只用一种表情来面对世界?</li>
+					<li>------布瓜的世界</li>
+				</ul>
+			</form>
+        </div>	
+	</div>
+	<div class="box3">
+		<p>整张网页里，自己写的东西并不是很多...肚子里实在没有那么多墨水了，只好四处盗语录了</p>
+		<p>现在的自己和小时候的自己确实很不一样了，小时候像个野小子一样喜欢在大夏天里跑来跑去；和几只死党们一起翻墙爬树，一起到河里抓鱼；喜欢跑到深山里找乐子...</p>
+		<p>现在的自己反而变得文静了一点，没有了像小时候那样伸手就敢抓起虫子的勇气了，只是会偶尔回想起曾经，然后不经意的笑起来</p>
+		<p>儿时的玩伴渐渐地也不知去向了...那时候总是呆在一起玩闹，那时候也不知道为什么会认识然后友谊就瞬间暴涨成了“老友”级别的，这大概是所谓的一见如故吧，不知道你们还好吗...很感谢那时你们陪在我身边，现在想起依旧是那么温暖，纵使时光已经把我们的距离拉得好远，可是现在的我真的好想你们，在时光的这端想念着时光那端的你们，只想问一句：How Are You?</p>
+		<p>关于小时候，关于她，我依旧有是很内疚，可是没有时光机...如果知道那是很可怕的病，可能以后再也见不到了，就应该毫不犹豫的看着镜头微笑，然后说着能让你开心的事；如果知道那是最后一面了，我就应该多说几句话或者多看几眼
+		；那个时候就应该常常给你写信，才不会让记忆模糊掉...不知道寄出的也是唯一的一封信，你收到了吗，现在的你还好吗</p>
+	</div>
+	<div class="box4" >
+		<img src="img/36.jpg" style="display:block;float:left;">
+        <p style="margin:0 10px;float:left;">
+        	我们再也回不去了！我们不可能再有一个童年一个初恋；不可能再有一个高中；不可能再是有从前的快乐，幸福，悲伤，痛苦。前一秒，通通都不可能再回去。生命一场无法回放的绝版电影...
+        </p>
+        <p style="float:right">
+        	小时候我们拼命想长大，然后又哀叹失去童年，以健康换取金钱，不久后又想用金钱恢复健康；对未来焦虑不已，却又无视现在的幸福，既不活在当下，也不活在未来...
+        </p>
+        <p>
+        	
+        </p>
+	</div>
+		<div class="box5">
+			<ul class="box4-ul">
+				<li style="height: 35px;">
+					<img src="img/2.png" style="height:100%">
+				</li> 
+				<li style="margin-left:5px">WeChatId:laola2013</li>
+				<li style="float:right;height: 35px;">
+					<img src="img/3.png" style="height:100%">
+				</li>
+				<li style="float:right;margin-right:5px">QQ:850875418</li>
+			</ul>
+		</div>
+</div>
+<div class="fixed" id="pic">
+	<div class="rel">
+		<a href="##"><img src="img/23.jpg"></a>
+		<a href="##" id="btn" class="none"></a>
+	</div>
+</div>
+	</body>
