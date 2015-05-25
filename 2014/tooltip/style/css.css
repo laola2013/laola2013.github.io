@@ -1,0 +1,178 @@
+html
+{
+	//当图片在做旋转时，文字大小不随之改变
+	-webkit-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	text-size-adjust: none;
+}
+body
+{
+	background-color: #47c9af; 
+	color: #74777b;
+	font-weight: 300;
+	font-size: 1.5em;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+/*任意标签及任意标签的前面或后面动态生成内容填充影响盒子的大小*/
+*,*:before,*:after{
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*任意标签前面或后面插入的都为块级元素且内容为空*/
+*:before,*:after{
+    content: "";
+    display: block;
+}
+/* *:after{
+	clear: both;
+} */
+li{
+	list-style: none;
+	float: left;
+}
+ul{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+	color: rgba(0,0,0,0.3);
+	font-weight: 600;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	-o-transition: color 0.3s;
+	transition:color 0.3s;
+}
+.nav-li a:hover{
+	color: #fff;
+}
+.container{
+	width: 650px;
+	height: 200px;
+	margin: 150px auto;
+}
+.nav-li{
+	position: relative;
+	margin-right: 30px;
+}
+.tip:hover span,
+.tip:hover span i {
+	opacity: 1;
+}
+span{
+   position: absolute;
+   bottom: 100%;
+   left: 50%;
+   margin: 0 0 25px -40px;
+   width: 80px;
+   height: 80px;
+   padding-top: 25px;
+   border-radius: 50%;
+	color: #47c9af; 
+   text-align: center;
+   opacity: 0;
+   background-color: #fff;
+}
+span::after{
+	width: 30px;
+	height: 20px;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin: -7px 0 0 -15px;
+	background-image: url(../img/1.svg);
+}
+/**i{
+	opacity: 1;
+}*/
+.affect-tip1 span{
+	-webkit-transform: translate3d(0,10px,0) rolate3d(1,1,1,45deg);
+	transform: translate3d(0,10px,0) rotate3d(1,1,1,45deg);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+.affect-tip1 span i {
+	-webkit-transform: scale3d(0,0,1);
+	transform: scale3d(0,0,1);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.affect-tip2 span {
+	-webkit-transform: translate3d(0,10px,0);
+	transform: translate3d(0,10px,0);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.affect-tip2 span i {
+	-webkit-transform: translate3d(0,15px,0);
+	transform: translate3d(0,15px,0);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.affect-tip3 span {
+	-webkit-transform: translate3d(0,10px,0) rotate3d(0,1,0,90deg);
+	transform: translate3d(0,10px,0) rotate3d(0,1,0,90deg);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.affect-tip3 span i {
+	-webkit-transform: scale3d(0,0,1);
+	transform: scale3d(0,0,1);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.affect-tip4 span {
+	-webkit-transform: translate3d(0,-20px,0);
+	transform: translate3d(0,-20px,0);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.affect-tip4 span i {
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.affect-tip5 span {
+	-webkit-transform: scale3d(0,0,1);
+	transform: scale3d(0,0,1);
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.affect-tip5 span i {
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tip:hover span,
+.tip:hover span i {
+	pointer-events: auto;
+	-webkit-transform: translate3d(0,0,0) scale3d(1,1,1);
+	transform: translate3d(0,0,0) scale3d(1,1,1);
+}
+
+.affect-tip1:hover span i {
+	-webkit-transform: rotate3d(1,1,1,0);
+	transform: rotate3d(1,1,1,0);
+}

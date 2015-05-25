@@ -1,0 +1,70 @@
+body{
+	background-color: #eee;
+}
+.container{
+	position: relative;
+	width: 1200px;
+	height: 750px;
+	margin: 45px auto;
+
+	border:2px solid #fff;
+}
+img{
+	position: absolute;
+	z-index: 1;
+	padding: 10px 10px 15px 10px;
+	background-color: #fff;
+	transition:0.2s;
+	-webkit-transition:0.2s;
+	-moz-transition:0.2s;
+}
+img:hover{
+	-wedkit-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	transform:rotate(0deg);
+	-webkit-transform:scale(1.2);
+	-moz-transform:scale(1.2);
+	transform:scale(1.2);
+	z-index: 2;
+	box-shadow: 10px 10px 15px #bbb;
+}
+.pho1{
+	-webkit-transform:rotate(15deg);
+	-moz-transform:rotate(15deg);
+	transform:rotate(15deg);
+}
+.pho2{
+	top: 30px;
+	left: 450px;
+	-webkit-transform:rotate(-10deg);
+	-moz-transform:rotate(-10deg);
+	transform:rotate(-10deg);
+}
+.pho3{
+	top: 35px;
+	left: 850px;
+	-webkit-transform:rotate(25deg);
+	-moz-transform:rotate(25deg);
+	transform:rotate(25deg);
+}
+.pho4{
+	top: 332px;
+    left: 45px;
+	-webkit-transform:rotate(-20deg);
+	-moz-transform:rotate(-20deg);
+	transform:rotate(-20deg);
+}
+.pho5{
+	top: 300px;
+	left: 450px;
+	-webkit-transform:rotate(25deg);
+	-moz-transform:rotate(25deg);
+	transform:rotate(25deg);
+}
+.pho6{
+	top: 350px;
+	left: 750px;
+	-webkit-transform:rotate(-25deg);
+	-moz-transform:rotate(-25deg);
+	transform:rotate(-25deg);
+}

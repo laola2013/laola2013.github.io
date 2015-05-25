@@ -1,0 +1,262 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MuLinson(2014)</title>
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<style type="text/css">
+	body
+	{
+		font-family: '微软雅黑';
+		font-size: 15px;
+		background-color: rgba(2,149,252,.6);
+	}
+	*
+	{
+		margin: 0;
+		padding: 0;
+	}
+	li
+	{
+		list-style: none;
+	}
+	.header
+	{
+		width: 120px;
+		height: 260px;  
+		position: fixed;
+		top: 60px;
+		left: 50%;
+		margin-left: 425px;
+		text-align: center;               
+	}
+	.header>ul{
+		height: 246px;
+		width: 80px;
+		margin: 0 auto;
+	}
+	.header>ul>li
+	{
+		list-style: none;
+		margin-top: 2px;
+	}
+	.header>span
+	{
+        line-height: 30px;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+	}
+	.header>ul>li>a
+	{
+
+		display: block;
+		color: #fff;
+		height: 45px;
+		width: 80px;
+ 		line-height: 45px;
+		text-align: center;
+		background-color: rgba(3,56,252,.3);
+		text-decoration: none;
+		border-radius: 8px;
+	}
+	.header>ul>li>a:hover,
+	.header>ul>li>a.current
+	{
+		color: #fd7802;
+		background-color: rgba(255,255,255,.5);
+	}
+    .logo_pho
+    {
+    	display: block;
+    	height: 80px;
+    	width: 80px;
+    	border-radius: 50%;
+    	margin: 0 auto;
+    }
+	.container
+	{
+		width: 860px;
+		margin: 60px auto;
+	}
+	.home
+	{
+		height: 600px;
+		width: 824px;
+		margin-bottom: 10px;
+		background-color: rgba(255,255,255,.2);
+		padding: 10px;
+	}
+	.box
+	{
+		width: 820px;
+		height: 596px;
+		border: 2px dashed #fff;
+		text-align: center;
+	}
+	.menu_list
+	{
+		display: block;
+		line-height: 45px;
+		width: 600px;
+		border-bottom: 1px solid #fff; 
+		margin: 0 auto;
+		font-weight: 600;
+		color: #fff;
+	}
+	.box_nav
+	{
+		width: 500px;
+		height: 300px;
+		margin: 45px auto;
+	}
+	.nav{
+		height: 50px;
+		line-height: 50px;
+		
+		width: 500px;
+		display: block;
+		background-color: rgba(3,56,252,.3); 
+		color: #fff;
+		
+		margin-top: 10px;
+		border-radius: 25px;
+		text-decoration: none;
+	}
+	.nav:hover{
+		background-color: rgba(255,255,255,.5);
+		color: #fd7802;
+	}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<img class="logo_pho" src="img/1.jpg"/>
+		<span>Mrs.MuLinson</span>
+		<ul id="menu">
+			<li><a href="#home1" class="current">Floor 1</a></li>
+			<li><a href="#home2">Floor 2</a></li>
+			<li><a href="#home3">Floor 3</a></li>
+			<li><a href="#home4">Floor 4</a></li>
+			<li><a href="#home5">Floor 5</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div id="home1" class="home">
+			<div class="box">
+				<span class="menu_list">Floor 1：导航的多样式</span>
+				<ul class="box_nav">
+					<li><a href="nav/bootstrap-nav.html" class="nav">用Bootstrap搭建导航</a></li>
+					<li><a href="coorfulnav.html" class="nav">hover式多样导航</a></li>
+					<li><a href="nav/down-nav1" class="nav">二级导航</a></li>
+					<li><a href="nav/down-nav2" class="nav">三级导航</a></li>
+					<li><a href="nav/nav-justfified.html" class="nav">响应式导航</a></li>
+					<li><a href="nav/nav3.html" class="nav">占行式导航</a></li>
+					<li><a href="nav/nav4.html" class="nav">炫简式导航</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="home2" class="home">
+			<div class="box">
+				<span class="menu_list">Floor 2</span>
+				<ul class="box_nav">
+					<li><a href="search_web/search.html" class="nav">搜索框页面</a></li>
+					<li><a href="tooltip/tooltip.html" class="nav">Css3的动画效果</a></li>
+					<li><a href="##" class="nav"></a></li>
+					<li><a href="##" class="nav"></a></li>
+					<li><a href="##" class="nav"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="home3" class="home">
+			<div class="box">
+				<span class="menu_list">Floor 3：图片展示</span>
+				<ul class="box_nav">
+					<li><a href="photo/colorfulpho/photoShow.html" class="nav">CSS3的图片动画旋转</a></li>
+					<li><a href="photo/scroll/scroll-photo.html" class="nav">marquee的自带封装动画</a></li>
+					<li><a href="photo/transform_pho/transform.html" class="nav">图片的旋转</a></li>
+					<li><a href="photo/photoshow.html" class="nav">图片文字说明</a></li>
+					<li><a href="photo/picture_down.html" class="nav">图片展示动画（显示与隐藏）</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="home4" class="home">
+			<div class="box">
+				<span class="menu_list">Floor 4</span>
+				<ul class="box_nav">
+					<li><a href="##" class="nav"></a></li>
+					<li><a href="##" class="nav"></a></li>
+					<li><a href="##" class="nav"></a></li>
+					<li><a href="##" class="nav"></a></li>
+					<li><a href="##" class="nav"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="home5" class="home">
+			<div class="box">
+				<span class="menu_list">Floor 5</span>
+				<ul class="box_nav">
+					<li><a href="##" class="nav"></a></li>
+					<li><a href="##" class="nav"></a></li>
+					<li><a href="##" class="nav"></a></li>
+					<li><a href="##" class="nav"></a></li>
+					<li><a href="##" class="nav"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			var menu = $("#menu");
+			var floors = $(".container").find(".home");
+			// var timer = true;
+			// menu.bind('click', function(){
+			// 	if(timer==true){
+			// 		setInterval(function(){	//do something
+			// 			var sltop = $(document).scrollTop();
+			// 			floors.each(function(){
+			// 				var currentTop = $(this).offset().top;
+			// 				if(sltop > currentTop){
+			// 					var top = sltop - currentTop;
+			// 					var speed = top/5;
+			// 					sltop = sltop - speed;
+			// 					}
+			// 				}else{
+			// 					var top = currentTop - sltop;
+			// 					var speed = top/5;	
+			// 					sltop = sltop + speed;
+			// 				}
+			// 			// console.log(currentTop);
+			// 		},300);
+					
+			// 	} else{timer = false;}
+			// })
+				// if(sltop )
+		// })
+
+			$(window).scroll(function(){
+				var sltop = $(document).scrollTop();
+				var currentId = "";
+				floors.each(function(){
+					var thisId = $(this);
+					var floorTop = thisId.offset().top;
+					// console.log(floorTop);
+					if(sltop > floorTop-100){
+						currentId = "#" + thisId.attr("id");
+					} else{
+						return false;
+					}
+				});
+
+				var currentClass = menu.find(".current");
+				if(currentId && currentClass.attr("href") != currentId){
+					currentClass.removeClass("current");
+					menu.find("[href="+ currentId +"]").addClass("current");
+				}
+			});
+
+		}) 
+
+	</script>
+</body>
+</html>

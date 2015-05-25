@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MuLinson</title>
+	<style type="text/css">
+	body{
+		font-family: '微软雅黑';
+		background-image: url(img/laola.jpg);
+		background-repeat: no-repeat;
+	}
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		height: 50px;
+		width: 530px;
+		margin: 80px auto;
+        text-align: center;
+	}
+	h1{
+		color: #ccc;
+		margin-bottom: 45px;
+		border-bottom: 2px solid #ccc;
+		padding: 10px;
+	}
+	.header{
+		height: 140px;
+		width: 	530px;
+	}
+	.header>li{
+		list-style: none;
+		float: left;
+		margin-left: 28px;
+	}
+	.header>li>a{
+		display: block;
+		height: 120px;
+		width: 120px;
+		padding: 10px;
+		line-height: 120px;
+		text-align: center;
+		border-radius: 50%;
+		background-color: rgba(0,0,0,.3);
+		font-size: 30px;
+		color: #ccc;
+		text-decoration: none;
+	}
+	.header>li>a:hover,
+	#input_btn>a:hover input,
+	#come_in>a:hover
+	{
+		background-color: rgba(2,149,252,.5);
+		color: #fff;
+	}
+	input{
+		height: 35px;
+		width: 118px;
+		outline: none;
+		border: none;
+		border-radius: 6px;
+		background-color: rgba(255,255,255,.3);
+		padding: 0 8px;
+		margin-top: 8px;
+		color: #ccc;
+	}
+	#input_btn{
+		height: 180px;
+		width: 134px;
+		text-align: center;
+		margin: 15px auto;
+        display: none;
+	}
+	#input_btn>a{
+		text-decoration: none;
+	}
+/*	#input_btn>a:hover input,{
+		background-color: rgba(2,149,252,.5);
+		color: #fff;
+	}*/
+	#come_in{
+		height: 35px;
+		width: 118px;
+		margin: 8px auto;
+        display: none;
+
+	}
+	#come_in>a{
+		display:block; 
+		height: 35px;
+		width: 118px;
+		line-height: 35px;
+		text-decoration: none;
+		text-align: center;
+		border-radius: 6px;
+		font-size: 	13px;
+		background-color: rgba(255,255,255,.3);
+		color: #ccc;
+	}	
+		</style>
+	
+</head>
+<body>	
+	<div class="container">
+	    <h1>MuLinson</h1>
+		<ul class="header">
+			<li><a href="2014/index.html" id="btn_2014">2014</a></li>
+			<li><a href="##2015/MuLinson/index.html" id="btn_2015">2015</a></li>
+			<li><a href="##">待续...</a></li>
+		</ul>
+		<div id="input_btn">
+			<input value="" type="password" placeholder="主银说访问要密钥嗷" id="inputpsd"><br/>
+			<a href="##"><input type="button" value="提交" id="btn" style="cursor:pointer"></a>
+			<div id="come_in"><a href="2015/MuLinson/mulinson.html" id="a_come">进入</a></div>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript">
+	window.onload = function (){
+		var btn_2015 = document.getElementById("btn_2015");
+		var input_btn = document.getElementById("input_btn");
+		var btn = document.getElementById("btn");
+		var a_come = document.getElementById("a_come");
+		var condition = true;
+		btn_2015.onclick = function(){
+			if (condition) {
+				input_btn.style.display = 'block';
+				condition = false;
+			} else {
+				input_btn.style.display = 'none';
+				condition = true;
+			};
+			
+		}
+		btn.onclick = function(){
+			var inputpsd = document.getElementById("inputpsd").value;
+			var come_in = document.getElementById("come_in");
+			// console.log(inputpsd);
+			if(inputpsd == 'huangfeng'){
+				come_in.style.display = 'block';
+			} else{
+				come_in.style.display = 'none';
+				alert("主银说密码不对哦！");
+			}
+		}
+		a_come.onclick = function (){
+			come_in.style.display = 'none';
+		}		
+	}
+</script>
+</html>

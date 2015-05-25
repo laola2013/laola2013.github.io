@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<style type="text/css">
+			.container{
+				height: 1080px;
+				width: 1920px;
+				display: none;
+				overflow: hidden;
+			}
+
+			.pic>img{
+			    height: 1080px;
+				width: 1920px;
+				
+			}
+		</style>
+	</head>
+
+	
+	<body>
+		<div id="ad" class="container">
+			<img class="pic" id="adpic" src="img/28.jpg">
+		</div>
+	 <script type="text/javascript">
+		window.onload = function(){
+	 		var ad = document.getElementById('ad');
+	 		var adpic = document.getElementById('adpic');
+	 		var h = 0;
+	 		var maxh = adpic.height;
+			setTimeout(picDown,3000);
+	 		function picDown() {
+		        if(h<maxh){
+		        	h += 10;
+		            ad.style.height= h + 'px';
+	 	        	ad.style.display = 'block';
+		        	setTimeout(picDown,1);
+               }else{
+                	ad.style.height= h + 'px';
+                   ad.style.display = 'block';
+                    setTimeout(picUp,3000);
+                }
+
+	 		}
+			
+	 		function picUp(){
+			if(h>0){
+					h -= 10;
+		            ad.style.height= h + 'px';
+ 	            setTimeout(picUp,1);
+		        }
+	 		}
+	 	}
+
+	 </script>
+
+	</body>
+
+</html>

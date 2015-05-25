@@ -1,0 +1,69 @@
+<!dOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style type="text/css">
+li{
+	float: left;
+	list-style: none;
+	display: block;
+    height: 200px;
+	width: 245px;
+	position: relative;
+	z-index: 1;
+    margin-right: 25px;
+}
+
+ul>li>a>span{
+	position: absolute;
+	z-index: 2;
+	bottom: 1px;
+	width: 245px;
+	height: 45px;
+	text-align: center;
+	color: #fff;
+	/* background-color: rgba(0,0,0,0.5); 设置背景透明度 ie过旧版本无效 */
+	filter:alpha(opacity=50); /* 为ie6设的 */
+	-moz-opacity:0.5;    /* 老版本的火狐浏览器 */
+	opacity: 0.5;    /* CSS的标准，支持Firefox，Safari和opera*/
+	-webkit-opacity:0.5; /* 旧的safar，chrome */
+    -khtml-opacity:0.5; /* 使用kHTML内核的Safari */
+    background: #000;
+	line-height: 45px;
+	display: none;
+}
+ul>li>a:hover span{
+	display: block;
+}
+/** ul>li>a:hover img{
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+    -moz-transform:scale(1.2);
+}  **/
+		</style>
+	</head>
+	<body>
+		<div>
+			<ul>
+				<li>
+					<a href="##">
+						<img src="img/hd.jpg">
+						<span>你爱我吗</span>
+					</a>
+				</li>
+				<li>
+					<a href="##">
+						<img src="img/58.jpg">
+						<span>你好吗？</span>
+					</a>
+				</li>
+				<li>
+					<a href="##">
+						<img src="img/54.jpg">
+						<span>今天是晴天</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

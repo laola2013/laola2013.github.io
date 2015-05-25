@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style type="text/css">
+li{
+	list-style: none;
+	display: inline;
+	margin: 0;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	display: inline;
+}
+div{
+	margin: 0 auto;
+	height: 750px;
+	width: 500px;
+	padding: 10px;
+	background-color: #ddd;
+	overflow:hidden; 
+}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul style="overflow:hidden" id="cont1">
+			<marquee behavior="alternate" direction="left" loop="-1" scrollamount="5" onmouseover="this.stop();" onmouseout="start();">
+				<li><img src="nh1.jpg"></li>
+				<li><img src="nh2.jpg"></li>
+				<li><img src="nh3.jpg"></li>
+				<li><img src="nh4.jpg"></li>
+			</marquee>
+			</ul >
+			<!--<ul id="cont2">
+			</ul>-->
+		</div>
+	</body>
+	<script type="text/javascript">
+	/*var area = document.getElementById("box");
+	var cont1 = document.getElementById("cont1");
+	var cont2 = document.getElementById("cont2");
+	cont2.innerHTML=cont1.innerHTML;
+	if(area.scrollLeft>=cont1.offsetWidth){
+		area.scrollLeft=0
+	}
+	else{
+		area.scrollLeft++;
+	}
+	area.scrollLeft = 0;
+	var time=50;
+	setInterval('area.scrollLeft++',time);*/
+	</script>
+
+</html>

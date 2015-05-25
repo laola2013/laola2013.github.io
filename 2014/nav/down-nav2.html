@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset='utf-8'/>
+    <style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+div{
+	width: 960px;
+	height: 450px;
+	margin: 10px auto;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	font-size:15px;
+	color: #fff;
+	text-align: center;
+	display: block;
+	background-color: #aaa;
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+}
+a:hover{
+	background-color: #000;
+}
+.nav-1 li{
+    float: left;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    
+}
+.down1{
+	position: relative;
+}
+
+.down2{
+	position: relative;
+}
+
+.nav-2,.nav-3{
+    display: none;
+}
+.nav-1 .down1:hover .nav-2{
+    position: absolute;
+	top: 25px;
+	left: -2px;
+	display: block;
+}
+.nav-2 .down2:hover .nav-3{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 80px;
+}	
+    </style>
+
+</head>
+<body>
+	<div>
+		<ul class="nav-1">
+			<li><a href="##">首页</a></li>
+			<li><a href="##">课程大厅</a></li>
+            <li class="down1"><a href="##">学习中心</a>
+                <ul class="nav-2">
+                	<li class="down2"><a href="##">前端课程</a>
+                	    <ul class="nav-3">
+	                        <li><a href="##">javascript</a></li>
+	                        <li><a href="##">CSS</a></li>
+	                        <li><a href="##">jQuery</a></li>
+                        </ul>
+                	</li>
+                	<li><a href="##">手机开发</a></li>
+                    <li><a href="##">后台编程</a></li>
+                </ul>
+            </li>
+            <li><a href="##">关于我们</a></li>
+			
+        </ul>
+	</div>
+</body>	
+</html>
