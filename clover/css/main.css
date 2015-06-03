@@ -119,7 +119,8 @@ img{
 	display: block;
 	width: 100%;
 }
-.row:after{
+.row:after,
+.header:after{
 	display: block;
 	content: '';
 	clear: both;
