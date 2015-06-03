@@ -53,7 +53,7 @@ img{
 	background-image: url(../img/banner.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	position: center;
+	/*position: center;*/
 	padding: 15em 0;
 	text-align: center;
 }
