@@ -49,6 +49,7 @@ img{
 	color: #ddd;
 }
 .header{
+	width: 100%;
 	background-image: url(../img/banner.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
