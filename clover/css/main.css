@@ -51,6 +51,7 @@ img{
 .header{
 	background-image: url(../img/banner.jpg);
 	width: 100%;
+	height: 717px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	/*position: center;*/
@@ -119,8 +120,7 @@ img{
 	display: block;
 	width: 100%;
 }
-.row:after,
-.header:after{
+.row:after{
 	display: block;
 	content: '';
 	clear: both;
