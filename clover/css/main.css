@@ -61,9 +61,12 @@ img{
 	margin-left: auto;
 	width: 1100px;
 }
-.logo{
-	
-	margin-bottom: 3em;
+.logo_a{
+	color: #aaa;
+}
+.logo_a:hover{
+	color: #fff;
+	border-bottom:1px solid #fff;
 }
 .logo>h1>a{
 	font-size: 2em;
