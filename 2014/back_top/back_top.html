@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<style type="text/css">
+	body
+	{
+		background-color: #eee;
+	}
+	.container
+	{   height: 300px;
+		width: 960px;
+		margin: 15px auto;
+	}
+	.c1
+	{
+ 		background-color: #c502fd;
+	}
+	.c2
+	{
+ 		background-color: #fd0296;
+	}
+	.c3
+	{ 
+ 		background-color: #c502fd;
+	}
+	.c4
+	{
+ 		background-color: #fd0296;
+	}
+	.c5
+	{
+ 		background-color: #c502fd;
+	}
+	.c6
+	{
+ 		background-color: #fd0296;
+	}
+	.c7
+	{
+ 		background-color: #c502fd;
+	}
+	.c8
+	{
+ 		background-color: #fd0296;
+	}
+	#back_top
+	{
+		position: fixed;
+		bottom: 25px;
+		right: 25px;
+		display: none;
+	}
+	.fa
+	{
+		display: block;
+		height: 45px;
+		width: 45px;
+		background-color: #ccc;
+		text-align: center;
+		line-height: 45px;
+		text-decoration: none;
+		color: #fff;
+		border-radius: 8px;
+	}
+	.fa:hover{
+		background-color: #fd0296;
+		color: #aaa;
+	}
+	</style>
+
+</head>
+<body>
+	<div class="container c1"></div>
+	<div class="container c2"></div>
+	<div class="container c3"></div>
+	<div class="container c4"></div>
+	<div class="container c5"></div>
+	<div class="container c6"></div>
+	<div class="container c7"></div>
+	<div class="container c8"></div>
+	<div id="back_top">
+		<a href="##" class="fa fa-arrow-up fa-2x" id="btn"></a>
+	</div>
+</body>
+<script type="text/javascript">
+    // 页面加载完后触发
+	window.onload = function(){
+		var back_top =document.getElementById('back_top');
+        var btn = document.getElementById('btn');
+        var timer = null;
+        // 获取页面的可视高度
+        var clientHeight = document.documentElement.clientHeight;
+        var isTop = true;
+        // 滚动条滚动后触发
+        window.onscroll = function (){
+        	// 获取滚动条滚动的就高度
+        	var slTop = document.documentElement.scrollTop || document.body.scrollTop;
+            if(slTop >= clientHeight){
+                back_top.style.display = 'block';
+            } else {
+            	back_top.style.display = 'none';
+            }
+            // 当滚动条滚动时清空timer
+            if(!isTop){
+            	clearInterval(timer);
+            }
+            isTop = false;
+        }
+        btn.onclick = function (){
+        	// 获取滚动条滚动的高度
+        	var slTop = document.documentElement.scrollTop || document.body.scrollTop;
+        	timer = setInterval( function(){
+                var changespeed = slTop/2
+                document.documentElement.scrollTop = document.body.scrollTop = -slTop + changespeed; 
+        	},30);
+        	// 当滚动高度为0时清空timer
+            if (!slTop) {
+            	clearInterval(timer);
+            };
+        }
+	}
+</script>
+</html>
