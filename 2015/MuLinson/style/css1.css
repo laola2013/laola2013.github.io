@@ -81,7 +81,6 @@ a{
 	height: 100px;
 	border-radius: 8px;
 	overflow: hidden;
-
 }
 .box-title{
 	height: 17px;
@@ -97,29 +96,42 @@ a{
     margin-top: 3px;
 	float: left;
 }
-.box-nav>ul>li{
-	margin-top: 5px;
+.home{
+	height: 40px;
+	display: block;
+	width: 84px;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+	margin-bottom: 5px;
 }
-
-.box-nav>ul>li>a{
+.home:hover{
+	color: #f36896;
+}
+.nav{
+	text-align: center;
 	display: block;
 	padding: 10px;
 	font-size: 15px;
 	color: #fff;
 	background-color: #f36896;
-    /*filter:alpha(opacity=80);
+	margin-top: 5px;
+/*    filter:alpha(opacity=80);
     -moz-opacity:0.8;
     opacity: 0.8;（设置透明度）*/
 }
-.box-nav>ul>li>a:hover{
+.nav:hover{
 	background-color: #fff;
 	color: #f36896;
 }
-.box-nav>ul>li.active>a{
+.active{
+	display: block;
+	padding: 10px;
 	cursor: not-allowed;
 	background-color: transparent;
-    color:#fff;
-    border-bottom:1px solid #fff;  
+    color: #f36896;
+/*    border-bottom:1px solid #fff; */ 
+	background-color: #fff;
 }
 
 .box-pho1{
