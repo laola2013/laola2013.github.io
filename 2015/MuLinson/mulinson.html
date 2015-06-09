@@ -103,14 +103,12 @@
 		</div>
 	</body>
 <script type="text/javascript">
-		
 		var ad = document.getElementById('ad');
 		var adpic = document.getElementById('adpic');
 		var h = 0;
 		var maxh = adpic.height;
 		function down(){
-
-            if(h<maxh){
+			if(h<maxh){
             	h += 8;
                 setTimeout(down,10);
             }else{
@@ -126,6 +124,6 @@
 				setTimeout(up,10);
 			}
 		}
-	setTimeout(down,2000);
+		setTimeout(down,2000);
 </script>
 </html>
