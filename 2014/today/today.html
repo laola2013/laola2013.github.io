@@ -15,19 +15,22 @@
 			padding: 0;
 		}
 		.container{
-			height: 288px;
+			height: 188px;
 			width: 288px;
 			margin: 88px auto;
-			border: 2px solid #fff;
-			border-radius: 50%;
+			
 			text-align: center;
 		}
-		#box{
-			margin-top: 45px;
-		}
-		#box>li{
+		.year{
+			font-size: 5em;
+			border-top: 1px dashed #fff;
+			border-bottom: 1px dashed #fff;
+			color: #fff;
 			list-style: none;
-			font-size: 3em;
+		}
+		#box>li.time{
+			list-style: none;
+			font-size: 2em;
 			color: #fff;
 		}
 	</style>
@@ -36,9 +39,9 @@
     
 	<div class="container">
 		<ul id="box">
-			<li></li>
-			<li></li>
-			<li></li>
+			<li class="year"></li>
+			<li class="time"></li>
+			<li class="time"></li>
 		</ul>
 	</div>
 </body>
