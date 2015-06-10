@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取系统时间</title>
+	<style type="text/css">
+		body{
+			font-family: '微软雅黑';
+			background-image: url(bkg.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			height: 288px;
+			width: 288px;
+			margin: 88px auto;
+			border: 2px solid #fff;
+			border-radius: 50%;
+			text-align: center;
+		}
+		#box{
+			margin-top: 45px;
+		}
+		#box>li{
+			list-style: none;
+			font-size: 3em;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+    
+	<div class="container">
+		<ul id="box">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+	window.onload = function(){
+		var list = document.getElementById('box').getElementsByTagName('li');
+        setInterval(function(){
+			var date = new Date();
+			var year = date.getFullYear();
+			var month = date.getMonth();
+			var day = date.getDate();
+			var hour = date.getHours();
+			var minutes = date.getMinutes();
+			var second = date.getSeconds();
+			month += 1;
+			list[0].innerHTML = year;
+			list[1].innerHTML = month + '/' + day;
+			list[2].innerHTML = hour + ':' + minutes + ':' + second;
+		// list[4].innerHTML = date;
+		},1000);
+	}
+</script>
+</html>
