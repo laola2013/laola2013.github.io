@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Resume</title>
+	<style type="text/css">
+		body{
+			font-family: '微软雅黑';
+			padding: 120px 0;
+			background-image: url(img/bck.jpg);
+		}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		*,
+		*:before,
+		*:after{
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-o-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		.nav{
+			position: fixed;
+			left: 50%;
+			margin-left: 472px;
+			top: 120px;
+		}
+		.nav>ul>li{
+			color: #fff;
+		}
+		.nav>ul>li>a{
+			display: block;
+			text-decoration: none;
+			color: #fff;
+			width: 100px;
+			height: 30px;
+			font-size: 15px;
+			margin-bottom: 6px;
+			background-color: #59bfd8;
+			border-radius: 30px 0;
+			text-align: center;
+			line-height: 30px;
+		}
+		.nav>ul>li>a:hover{
+			background-color: #eb82a1; 
+		}
+		.container{
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+			width: 922px;
+			padding: 10px;
+			border: 1px solid #fff;
+		}
+		*:after{
+			display: block;
+			content: '';
+			clear: both;
+		}
+		.decoration{
+			position: absolute;
+			bottom: 100%;
+			right: 0;
+		}
+		h2>span{
+			color: #fff;
+			display: block;
+			font-size: 18px;
+			padding: 2px 6px;
+			background-color: #eb8d6b;
+		}
+		.demo{
+			width: 900px;
+			padding: 25px;
+			background-color: rgba(255,255,255,.6);
+		}
+		.demo>div{
+			margin-bottom: 45px;
+		}
+		.personal>img{
+			display: block;
+			float: right;
+			margin-top: 15px;
+			box-shadow: 5px 5px 10px #6f6f6f;
+		}
+		.personal>ul{
+			width: 35%;
+			margin-right: 25px;
+			margin-top: 15px;
+			float: left;
+		}
+		.personal>ul>li,
+		.education>ul>li{
+			display: block;
+			list-style: none;
+			height: 35px;
+			font-size: 14px;
+			line-height: 35px;
+		}
+		.education>ul{
+			margin-top: 15px;
+		}
+		.education>p,
+		.technology>p,
+		.campus>p,
+		.interest>p,
+		.evaluation>p,
+		.reputation>p{
+			font-size: 14px;
+			margin-top: 15px;
+			color: #1d1d1d;	
+		}
+
+	</style>
+</head>
+<body>
+<div class="nav">
+	<ul>
+		<li><a href="#personal">个人资料</a></li>
+		<li><a href="#education">教育背景</a></li>
+		<li><a href="#technology">IT技能</a></li>
+		<li><a href="#campus">校园经历</a></li>
+		<li><a href="#reputation">获奖荣誉</a></li>
+		<li><a href="#experience">实习经历</a></li>
+		<li><a href="#interest">个人兴趣</a></li>
+		<li><a href="#evaluation">自我评价</a></li>
+	</ul>
+</div>
+<div class="header">
+	<div class="container">
+		<div class="decoration">
+			<img src="img/cat.png">
+		</div>
+		<div class="demo">
+			<div class="personal" id="personal">
+				<h2><span>个人资料</span></h2>
+				<ul>
+					<li>姓名：黄枫</li>
+					<li>出生：1993-11-03</li>
+					<li>性别：女</li>
+					<li>户口地：福建省 龙岩市</li>
+					<li>现居地：辽宁省 沈阳市</li>
+				</ul>
+				<ul>
+					<li>婚姻状况：未婚</li>
+					<li>政治面貌：共青团员</li>
+					<li>民族：汉族</li>
+					<li>移动电话：18842435466</li>
+					<li>电子邮件：850875418@qq.com</li>
+				</ul>
+				<img src="img/hf.jpg">
+			</div>
+			<div class="education" id="education">
+				<h2><span>教育背景</span></h2>
+				<ul>
+					<li>就读时间：2012-9-1 至 2016-6-1</li>
+					<li>学校名称：沈阳师范大学</li>
+					<li>专业名称：计算机科学与技术</li>
+					<li>专业分类：工科</li>
+					<li>学历：本科</li>
+				</ul>
+				<p><strong>专业主修：</strong>C，C++以及JAVA程序设计；传感器与检测技术；数字电子技术；数据结构；计算机组成原理；嵌入式操作系统；ARM嵌入式系统结构和编程等。</p>
+			</div>
+			<div class="technology" id="technology">
+				<h2><span>IT技能</span></h2>
+				<p><strong>精通的技能：</strong>HTML,CSS以及JavaScript语言；FontAwesome图标字体库；github的项目托管以及git的版本控制和基本的页面UI布局。</p>
+				<p><strong>熟悉的技能：</strong>熟悉bootsrap前端开发框架和Jquery框架以及使用photoshop处理图片。</p>
+			</div>
+			<div class="campus" id="campus">
+				<h2><span>校园经历</span></h2>
+				<p><strong>大学前期：</strong>积极参加班级和学校组织的各类活动。</p>
+				<p><strong>大学后期：</strong>加入了学校的优软工作室，前期在工作室里担任美工，学习用photoshop处理图片以及UI布局，后期因为工作室的需要，便开始了前端开发的学习（学习HTML,CSS以及javascript等技能知识）。</p>
+			</div>
+			<div class="reputation">
+				<h2><span>获奖荣誉</span></h2>
+				<p><strong>2010年6月：</strong>在第四届“地球小博士”全国地理科技大赛中荣获一等奖（绘画类）</p>
+				<p>此外在校内举办的绘画类比赛中曾多次获奖，小学时期还曾获得全国青少年文艺大赛“手抄板报”的三等奖</p>
+			</div>
+			<div class="experience">
+				<h2><span>实习经历</span></h2>
+				<p></p>
+			</div>
+			<div class="interest" id="interest">
+				<h2><span>个人兴趣</span></h2>
+				<p><strong>描述：</strong>业余时喜欢绘画（从小学到高中曾多次获得与美术相关的奖项），也喜欢看漫画摄影一类的书籍，喜欢上网搜索别人写的优秀网页作品并随之模仿，有着自己的独特审美，从小学到高中一直都担任宣传委员，为班级的板报做设计和绘制，将来想成为一名优秀的交互设计师</p>
+			</div>
+			<div class="evaluation" id="evaluation">
+				<h2><span>自我评价</span></h2>
+				<p>性格活泼开朗，有较强的进取心以及团体合作精神，面对困难有较强的耐心,对自己的作品审美较高，不合意的外观会改到满意为止，有吃苦耐劳的毅力</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

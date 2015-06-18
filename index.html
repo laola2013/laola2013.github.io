@@ -43,7 +43,7 @@
 		text-align: center;
 		border-radius: 50%;
 		background-color: rgba(0,0,0,.3);
-		font-size: 30px;
+		font-size: 25px;
 		color: #ccc;
 		text-decoration: none;
 	}
@@ -104,14 +104,14 @@
 	<div class="container">
 	    <h1>Mrs.MuLinson</h1>
 		<ul class="header">
-			<li><a href="2014/index.html" id="btn_2014">2014</a></li>
-			<li><a href="##2015/MuLinson/index.html" id="btn_2015">2015</a></li>
-			<li><a href="clover/index.html">clover</a></li>
+			<li><a href="resume/index.html">Resume</a></li>
+			<li><a href="##" id="btn_2015">Exhibition</a></li>
+			<li><a href="clover/index.html">Clover</a></li>
 		</ul>
 		<div id="input_btn">
 			<input value="" type="password" placeholder="主银说访问要密钥嗷" id="inputpsd"><br/>
 			<a href="##"><input type="button" value="提交" id="btn" style="cursor:pointer"></a>
-			<div id="come_in"><a href="2015/MuLinson/mulinson.html" id="a_come">进入</a></div>
+			<div id="come_in"><a href="exhibition/index.html" id="a_come">进入</a></div>
 		</div>
 	</div>
 
@@ -123,6 +123,7 @@
 		var btn = document.getElementById("btn");
 		var a_come = document.getElementById("a_come");
 		var condition = true;
+		var password = 'huangfeng'
 		btn_2015.onclick = function(){
 			if (condition) {
 				input_btn.style.display = 'block';
@@ -137,11 +138,12 @@
 			var inputpsd = document.getElementById("inputpsd").value;
 			var come_in = document.getElementById("come_in");
 			// console.log(inputpsd);
-			if(inputpsd == 'huangfeng'){
+			if(inputpsd == password){
 				come_in.style.display = 'block';
 			} else{
 				come_in.style.display = 'none';
 				alert("主银说密码不对哦！");
+
 			}
 		}
 		a_come.onclick = function (){
