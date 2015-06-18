@@ -23,17 +23,17 @@
 		}
 		.introduction{
 			position: fixed;
-			left: 50%;
-			margin-left: 260px;	
-			top: 160px;
-			height: 160px;
-			width: 280px;
-/*			border: 1px solid #1d1d1d;*/														
+			right: 80px;
+			top: 110px;
+			height: 220px;
+			width: 280px;												
 		}
-		p{
+		.introduction>p{
 			font-size: 14px;
-			color: #1f1f1f;
-			margin-top: 15px;
+			color: #110219;
+			margin-top: 5px;
+			display: inline-block;
+			width: 280px;
 		}
 		.container{
 			width: 800px;
@@ -45,45 +45,60 @@
 			width: 100%;
 			height: 30px;
 			border-bottom: 1px solid #1f1f1f;
-			color: #1f1f1f;
+			color: #110219;
 			text-align: center;
 		}
-		.row:after{
-			display: block;
-			content: '';
-			clear: both;
-		}
+
 		.nav>li{
 			list-style: none;
 		}
 		.nav>li>a{
-			font-size: 22px;
-			line-height: 120px;
-			text-align: center;
+			position: relative;
+			display: block;
+			font-size: 18px;
 			text-decoration: none;
 			float: left;
-			color: #1f1f1f;
-			height: 120px;
-			width: 120px;
+			color: #110219;
+			height: 22px;
+			width: 110px;
 			list-style: none;
-			border: 1px solid #1d1d1d;
-			margin: 20px;
+			margin-right: 75px;
+		}
+		.nav>li>a:hover{
+			color: #4b4033;
+		}
+		.img{
+			position: absolute;
+			bottom: -15px;
+			left: 50%;
+			margin-left: 28px;
+/*			display: none;*/
+			height: 118px;
+			width: 96px;
+			opacity: 0;
+			transition: opacity 0.3s,transform 0.3s;
+		}
+		.nav>li>a:hover .img{
+			opacity: 1;
 		}
 	</style>
 </head>
 <body>
 	<div class="introduction">
-		<h3>MULINSON</h3>
-		<p>这些都是偶业余时学习制作的小东西，网页的模板都是自己的设计并制作的</p>
+		<h3>Mrs.MuLinson</h3>
+		<p >这些都是偶在业余时间里学习制作的小玩意，网页的模板都是自己的设计并制作的喔...嗯，偶就是将来程序猿大队伍中的一只小苦逼</p>
+		<p><strong>偶的属性是什么呢？</strong></p>
+		<p>女程序猿 ---> 女汉纸</p>
+		<p>偶 ---> 女程序猿</p>
+		<p>So 偶 ---> 女汉纸~~( ﹁ ﹁ )~~~</p>
+		<p>But 偶也是是带着文艺小清新的女汉纸...</p>
 	</div>
 	<div class="container">
-		<div class="row">
 			<ul class="nav">
-				<li><a href="file/index.html">文件</a></li>
-				<li><a href="web_model/mulinson.html">模板</a></li>
-				<li><a href="../index.html">首页</a></li>
+				<li><a href="file/index.html">学习与整理<img src="img/hd.png" class="img"></a></li>
+				<li><a href="web_model/mulinson.html">模板与设计<img src="img/hd.png" class="img"></a></li>
+				<li><a href="../index.html">首页<img src="img/hd.png" class="img"></a></li>
 			</ul>
-		</div>
 	</div>
 </body>
 </html>
