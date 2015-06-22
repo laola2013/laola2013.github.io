@@ -8,12 +8,32 @@
 			font-family: '微软雅黑';
 			background-color: #1f1f1f;
 		}
+		.header{
+			text-align: center;
+			width: 300px;
+			height: 80px;
+			margin: 25px auto;
+			color: #fff;
+		}
+		.header>h2{
+			line-height: 35px;
+			border-bottom: 1px solid #fff;
+			margin-bottom: 15px;
+		}
+		.header>a{
+			font-size: 18px;
+			color: #fff;
+			text-decoration: none;
+		}
+		.header>a:hover{
+			color: #f36896;
+		}
 		*{
 			margin: 0;
 			padding: 0;
 		}
 		.demo{
-			padding: 6em 0;
+			padding: 2em 0;
 			background-image: url(img/bck.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
@@ -42,10 +62,8 @@
 		}
 		.img{
 			float: left;
-/*			padding: 10px;*/
 			background-color: #fff;
 			vertical-align: top;
-/*			margin: 2px;*/
 		}
 		.button{
 			text-decoration: none;
@@ -76,23 +94,21 @@
 </head>
 <body>
 	<div class="demo">
+		<div class="header">
+			<h2>MuLinson.showTime</h2>
+			<a href="../index.html">Back</a>
+		</div>
 		<div class="container">
 			<div class="row">
-				<div id="showPho" style="left:-520px;">
-					<img src="img/pho11.jpg" class="img">
-					<img src="img/pho1.jpg" class="img">
- 					<img src="img/pho3.jpg" class="img">
-					<img src="img/pho4.jpg" class="img">
-					<img src="img/pho5.jpg" class="img">
-					<img src="img/pho2.jpg" class="img">
-					<img src="img/pho7.jpg" class="img">
-					<img src="img/pho8.jpg" class="img">
-					<img src="img/pho9.jpg" class="img">
-					<img src="img/pho10.jpg" class="img">
-					<img src="img/pho11.jpg" class="img">
-					<img src="img/pho1.jpg" class="img">
+				<div id="showPho" style="left:-1040px;">
+					<img src="img/pic5.jpg" class="img">
+					<img src="img/pic2.jpg" class="img">
+ 					<img src="img/pic1.jpg" class="img">
+					<img src="img/pic3.jpg" class="img">
+					<img src="img/pic4.jpg" class="img">
+					<img src="img/pic5.jpg" class="img">
+					<img src="img/pic2.jpg" class="img">
 				</div>
-
 			</div>
 			<a href="##" class="button" id="pre">&lt</a>
 			<a href="##" class="button" id="next">&gt</a>
@@ -109,11 +125,11 @@
 		function animate(offset){
 		    var nowleft = parseInt(showPho.style.left) + offset;
 		    showPho.style.left = nowleft + 'px';
-		    if(nowleft	> -520) {
+		    if(nowleft	> -1040) {
 		    	showPho.style.left	= -5200 + 'px';
 		    }
 		    if (nowleft < -5200) {	
-		    	showPho.style.left = -520 + 'px';
+		    	showPho.style.left = -1040 + 'px';
 		    }
 		}
 		pre.onclick = function(){
