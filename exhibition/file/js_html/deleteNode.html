@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>删除节点</title>
+	<style type="text/css">
+		body{
+			background-color: rgba(2, 149, 252, 0.6);
+		}		
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			width: 600px;
+			margin: 120px auto;
+		}
+		li{
+			list-style: none;
+			position: relative;	
+			font-size: 14px;
+			width: 590px;
+			height: 28px;
+			line-height: 28px;
+			display: block;
+			margin: 10px;
+			color: #FD7802;
+			padding-left: 10px;
+			background-color: rgba(255,255,255,.5);
+		}
+		button{
+			position: absolute;
+			left: 550px;
+			top: 3px;	
+			display: none;
+		}
+		li:hover button{
+			display: block;
+		}
+	</style>
+	<script type="text/javascript">
+        // window.onload = function(){
+        	function del(cur){
+        		var text = cur.parentNode;
+        		text.parentNode.removeChild(text);
+        	}
+        // }
+	</script>
+</head>
+<body>
+	<div class="container">
+		<ul>
+			<li>苹果<button onclick="del(this)">删除</button></li>
+			<li>香蕉<button onclick="del(this)">删除</button></li>
+			<li>草莓<button onclick="del(this)">删除</button></li>
+			<li>葡萄<button onclick="del(this)">删除</button></li>
+			<li>芒果<button onclick="del(this)">删除</button></li>
+			<li>荔枝<button onclick="del(this)">删除</button></li>
+		</ul>
+	</div>
+</body>
+</html>

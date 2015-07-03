@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>添加节点</title>
+	<style type="text/css">
+		body{
+			background-color: rgba(2, 149, 252, 0.6);
+		}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			text-align: center;
+			width: 600px;
+			margin: 120px auto;
+		}
+		li{
+			list-style: none;
+			/*width: 120px;*/
+			font-size: 14px;
+			height: 30px;
+			color: #FD7802;
+			line-height: 30px;
+			background-color: rgba(255,255,255,.5);
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		textarea{
+			padding: 5px;
+			width: 590px;
+			margin-bottom: 20px;
+			outline: none;
+			border: none;	
+			background-color: rgba(255,255,255,.8);
+		}
+		#btn{
+			width: 60px;
+			height: 35px;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var list = document.getElementById('list');
+		var text = document.getElementById('text');
+		var btn = document.getElementById('btn');
+		btn.onclick = function(){
+			var val = text.value;
+			if(val == ''){
+				return;
+			} else{
+			var li = document.createElement('li');
+			li.innerHTML = val;
+			list.appendChild(li);
+			text.value = '';
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<ul id="list">
+			<li>苹果</li>
+			<li>香蕉</li>
+			<li>草莓</li>
+			<li>水蜜桃</li>
+			<li>芒果</li>
+		</ul>
+		<textarea id="text"></textarea>
+		<button id="btn">提交</button>
+	</div>
+</body>
+</html>

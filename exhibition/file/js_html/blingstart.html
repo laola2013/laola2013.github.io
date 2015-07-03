@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>亮星星</title>
+	<style type="text/css">
+		#starts{
+			text-align: center;
+			width: 220px;
+			height: 200px;
+			margin: 120px auto;
+		}
+		#starts span{
+			font-size: 3em;
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var starts = document.getElementById('starts').getElementsByTagName('span');
+		var show = document.getElementById('show');
+
+		for(var i =0;i<starts.length;i++){
+			starts[i].onclick = function(){
+				showStart(this.getAttribute('start'));
+			}
+		}
+
+		function showStart(n){
+			n = parseInt(n);
+			for(var i = 0;i < starts.length;i++){
+				if(i <= n-1){
+					starts[i].style.color = 'red';
+				} else {
+					starts[i].style.color = '';
+				}
+				show.innerHTML = n + '星';
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="starts">
+		<span start = "1">☆</span>
+		<span start = "2">☆</span>
+		<span start = "3">☆</span>
+		<span start = "4">☆</span>
+		<span start = "5">☆</span>
+		<div id="show"></div>
+	</div>
+	
+</body>
+</html>

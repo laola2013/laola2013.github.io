@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>编辑与提交</title>
+	<style type="text/css">
+		body{
+			background-color: rgba(2, 149, 252, 0.6);
+		}	
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			text-align: center;
+			width: 600px;
+			margin: 120px auto;
+		}
+		li{
+			list-style: none;
+			position: relative;	
+			font-size: 14px;
+			width: 590px;
+			height: 28px;
+			line-height: 28px;
+			display: block;
+			margin-bottom: 10px;
+			color: #FD7802;
+			padding-left: 10px;
+			background-color: rgba(255,255,255,.5);
+		}
+		.btn{
+			position: absolute;
+			left: 550px;
+			top: 3px;	
+			display: none;
+		}
+		li:hover .btn{
+			display: block;
+		}
+		textarea{
+			width: 590px;
+			border: none;
+			color: #FD7802;
+			padding: 5px;
+			margin-bottom: 20px;
+			background-color: rgba(255,255,255,.5);
+		}
+	</style>
+	<script type="text/javascript">
+        window.onload = function(){
+           var list = document.getElementById('list').getElementsByTagName('li');
+           var submitBtn = document.getElementById('submitBtn');
+           var edit = document.getElementById('edit');
+           var text = document.getElementById('text');
+           var cur;
+
+           for(var i = 0;i<list.length;i++){
+	           	list[i].lastChild.onclick = function(){
+	           		cur = this.parentNode;
+	           		text.value = cur.firstChild.innerHTML;
+	           		edit.style.display = 'block';
+	           	}
+            }
+
+           submitBtn.onclick = function(){
+	           	var val = text.value;
+	           	if(val == ''){
+	           		return;
+	           	}
+	           	cur.firstChild.innerHTML = val;
+	           	edit.style.display = 'none';
+	           	val = '';
+            }
+        }
+	</script>
+</head>
+<body>
+	<div class="container">
+		<ul id="list">
+			<li><span>苹果</span><button class="btn">编辑</button></li>
+			<li><span>香蕉</span><button class="btn">编辑</button></li>
+			<li><span>草莓</span><button class="btn">编辑</button></li>
+			<li><span>葡萄</span><button class="btn">编辑</button></li>
+			<li><span>芒果</span><button class="btn">编辑</button></li>
+			<li><span>荔枝</span><button class="btn">编辑</button></li>
+		</ul>
+		<div id="edit" style="display:none;">
+			<textarea id="text"></textarea>
+			<button id="submitBtn">提交</button>
+		</div>
+	</div>
+</body>
+</html>
