@@ -90,7 +90,87 @@
 			background-color: rgba(0,0,0,0.5);
 			color: #f36896; 
 		}
+		#list{
+			position: absolute;
+			left: 50%;
+			margin-left: -38px;
+		}
+		#list>.current{
+			background-color: #f36896;
+		}
+		#list>span{
+			display: inline-block;
+			height: 10px;
+			width: 10px;
+			background-color: rgba(0,0,0,.3);
+			border: 1px solid #fff;
+			border-radius: 50%;
+			cursor: pointer;
+		}
 	</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var showPho	= document.getElementById('showPho');
+		var list = document.getElementById('list').getElementsByTagName('span');
+		var pre	= document.getElementById('pre');
+		var next = document.getElementById('next');
+		var index = 1;
+
+		function animate(offset){
+		    var nowleft = parseInt(showPho.style.left) + offset;
+		    showPho.style.left = nowleft + 'px';
+		    if(nowleft	> -1040) {
+		    	showPho.style.left	= -5200 + 'px';
+		    }
+		    if (nowleft < -5200) {	
+		    	showPho.style.left = -1040 + 'px';
+		    }
+		}
+
+		function showButton(){
+
+			for(var i = 0;i<list.length;i++){
+				if(list[i].className == 'current'){
+					list[i].className = '';
+					break;
+				}
+			}
+			list[index-1].className = 'current';
+		}
+
+		pre.onclick = function(){
+			if(index == 1){
+				index = 5;
+			} else {
+				index -= 1;
+			}
+			animate(1040);
+			showButton();
+		}
+		next.onclick = function(){
+			if(index == 5){
+				index = 1;
+			}else {
+				index += 1;
+			}
+			animate(-1040);
+			showButton();
+		}
+        
+		for(var i = 0;i<list.length;i++){
+			list[i].onclick = function(){
+				if(this.className == 'current'){
+					return;
+				}
+				var myIndex = parseInt(this.getAttribute('index'));
+				offset = -1040 *(myIndex - index);
+				animate(offset);
+				index = myIndex;
+				showButton();
+			}
+		}
+	}	
+</script>
 </head>
 <body>
 	<div class="demo">
@@ -112,32 +192,15 @@
 			</div>
 			<a href="##" class="button" id="pre">&lt</a>
 			<a href="##" class="button" id="next">&gt</a>
+			<div id="list">
+				<span index="1" class="current"></span>
+				<span index="2"></span>
+				<span index="3"></span>
+				<span index="4"></span>
+				<span index="5"></span>
+			</div>
 		</div>
 	</div>
 </body>
-<script type="text/javascript">
-	window.onload = function(){
-		var showPho	= document.getElementById('showPho');
-		
-		var pre	= document.getElementById('pre');
-		var next = document.getElementById('next');
 
-		function animate(offset){
-		    var nowleft = parseInt(showPho.style.left) + offset;
-		    showPho.style.left = nowleft + 'px';
-		    if(nowleft	> -1040) {
-		    	showPho.style.left	= -5200 + 'px';
-		    }
-		    if (nowleft < -5200) {	
-		    	showPho.style.left = -1040 + 'px';
-		    }
-		}
-		pre.onclick = function(){
-			animate(1040);
-		}
-		next.onclick = function(){
-			animate(-1040);
-		}
-	}	
-</script>
 </html>
