@@ -16,8 +16,11 @@
 	.container{
 		height: 50px;
 		width: 530px;
-		margin: 80px auto;
+		margin: 50px auto;
         text-align: center;
+	}
+	li{
+		list-style: none;
 	}
 	h1{
 		color: #ccc;
@@ -29,8 +32,12 @@
 		height: 140px;
 		width: 	530px;
 	}
+	#showTime>li{
+		font-size: 28px;
+		color: #eb82a1;
+	}
 	.header>li{
-		list-style: none;
+		
 		float: left;
 		margin-left: 28px;
 	}
@@ -102,6 +109,10 @@
 </head>
 <body>	
 	<div class="container">
+		<ul id="showTime">
+			<li></li>
+			<li></li>
+		</ul>
 	    <h1>Mrs.MuLinson</h1>
 		<ul class="header">
 			<li><a href="resume/index.html">Resume</a></li>
@@ -124,7 +135,24 @@
 		var a_come = document.getElementById("a_come");
 		var inputpsd = document.getElementById("inputpsd");
 		var condition = true;
-		var password = 'huangfeng'
+		var password = 'huangfeng';
+		var showTime = document.getElementById("showTime").getElementsByTagName('li');
+
+		// 获取系统时间
+
+		setInterval(function(){
+			var date = new Date();
+			var year = date.getFullYear();
+			var month = date.getMonth();
+			var day = date.getDate();
+			var hours = date.getHours();
+			var minute = date.getMinutes();
+			var secound = date.getSeconds();
+			month += 1;
+			showTime[0].innerHTML = year + '/' + month + '/' + day;
+			showTime[1].innerHTML = hours + ':' + minute + ':' + secound;
+		},1000)
+
 		btn_ebt.onclick = function(){
 			if (condition) {
 				input_btn.style.display = 'block';
