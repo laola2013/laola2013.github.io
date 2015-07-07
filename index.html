@@ -16,7 +16,7 @@
 	.container{
 		height: 50px;
 		width: 530px;
-		margin: 50px auto;
+		margin: 80px auto;
         text-align: center;
 	}
 	li{
@@ -28,20 +28,57 @@
 		border-bottom: 2px solid #ccc;
 		padding: 10px;
 	}
-	.header{
+	#header{
 		height: 140px;
 		width: 	530px;
 	}
-	#showTime>li{
-		font-size: 28px;
-		color: #eb82a1;
+	#message{
+		height: 60px;
+		width: 160px;
+		position: absolute;
+		bottom: 280px;
+		left: 170px;
+
 	}
-	.header>li{
-		
+	#showMessage>li{
+	    border: 1px solid #fff;
+	    border-radius: 10px;
+	    font-size: 12px;
+	    color: #fff;
+	    padding: 5px;
+	    height: 70px;
+		width: 160px;
+		display: none;
+	}
+	#timer{
+		position: absolute;
+		cursor: pointer;
+		left: 45px;
+		height: 120px;
+		width: 120px;
+		background-color: rgba(255,255,255,.3);
+		text-align: center;
+		border-radius: 10px;
+	}
+	#timer>img{
+		position: absolute;
+		width: 92px;
+		height: 127px;
+		bottom: 118px;
+		left: 15px;
+	}
+	#showTime{		
+		margin-top: 35px;
+	}
+	#showTime>li{
+		font-size: 18px;
+		color: #fff;
+	}
+	#header>li{		
 		float: left;
 		margin-left: 28px;
 	}
-	.header>li>a{
+	#header>li>a{
 		display: block;
 		height: 120px;
 		width: 120px;
@@ -54,7 +91,7 @@
 		color: #ccc;
 		text-decoration: none;
 	}
-	.header>li>a:hover,
+	#header>li>a:hover,
 	#input_btn>a:hover input,
 	#come_in>a:hover
 	{
@@ -107,14 +144,24 @@
 	</style>
 	
 </head>
-<body>	
-	<div class="container">
+<body>
+	<div id="message">
+		<ul id ="showMessage">
+			<li>里面有主银的个人资料哦</li>
+			<li>这是主银的私人小金库哦，里面放满了主银个人制作的小东西，想要访问的话快去找主人拿密钥吧</li>
+			<li>这是主银放学习笔记的地方哦，有兴趣的话去看看，说不定能帮你涨姿势呢</li>
+		</ul>
+	</div>
+	<div id="timer" style="bottom: 60px;">
+		<img src="img/7.png">
 		<ul id="showTime">
 			<li></li>
 			<li></li>
 		</ul>
+	</div>
+	<div class="container">
 	    <h1>Mrs.MuLinson</h1>
-		<ul class="header">
+		<ul id="header">
 			<li><a href="resume/index.html">Resume</a></li>
 			<li><a href="##" id="btn_ebt">Exhibition</a></li>
 			<li><a href="clover/index.html">Clover</a></li>
@@ -125,7 +172,6 @@
 			<div id="come_in"><a href="exhibition/index.html" id="a_come">进入</a></div>
 		</div>
 	</div>
-
 </body>
 <script type="text/javascript">
 	window.onload = function (){
@@ -136,8 +182,48 @@
 		var inputpsd = document.getElementById("inputpsd");
 		var condition = true;
 		var password = 'huangfeng';
-		var showTime = document.getElementById("showTime").getElementsByTagName('li');
+		var showTime = document.getElementById("showTime").getElementsByTagName("li");
+		var header = document.getElementById("header").getElementsByTagName("li");
+		var showMessage = document.getElementById("showMessage").getElementsByTagName("li");
+		
+        header[0].onmouseover = function(){
+        	showMessage[0].style.display = 'block';
+        }
+        header[1].onmouseover = function(){
+        	showMessage[1].style.display = 'block';
+        }
+        header[2].onmouseover = function(){
+        	showMessage[2].style.display = 'block';
+        }
 
+        header[0].onmouseout = function(){
+        	showMessage[0].style.display = 'none';
+        }
+        header[1].onmouseout = function(){
+        	showMessage[1].style.display = 'none';
+        }
+        header[2].onmouseout = function(){
+        	showMessage[2].style.display = 'none';
+        }
+		// for(var i = 0;i<header.length;i++ ) {
+		// 	header[i].onmouseover = function(){	
+		// 		var i = parseInt(this.getAttribute('index'));
+		// 		n = i;		
+  //                showM(n); 
+		// 	} 
+		// 	header[i].onmouseout = function(){
+		// 		var i = parseInt(this.getAttribute('index'));
+		// 		n = i;
+		// 		hideM(n);
+		// 	}
+		// }
+
+		// function showM(n){
+		// 	showMessage[n].style.display = 'block';
+		// }
+  //       function hideM(n){
+  //       	showMessage[n].style.display = 'none';
+  //       }
 		// 获取系统时间
 
 		setInterval(function(){
@@ -151,7 +237,9 @@
 			month += 1;
 			showTime[0].innerHTML = year + '/' + month + '/' + day;
 			showTime[1].innerHTML = hours + ':' + minute + ':' + secound;
-		},1000)
+		},1000);
+
+		// 密码验证
 
 		btn_ebt.onclick = function(){
 			if (condition) {
