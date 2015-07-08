@@ -22,9 +22,12 @@
 			box-sizing: border-box;
 		}
 		.container{
-			width:840px;
-			margin: 120px auto;
+			height:160px;
+			margin: 120px 0;
 			text-align: center;
+			background-color: rgba(255,255,255,.3);
+			
+			transition: opacity 0.3s,transform 0.3s;
 		}
 		h3{
 			display: inline-block;
@@ -34,7 +37,10 @@
 			color: #110219;
 			text-align: center;
 		}
-
+        .nav{
+        	width: 840px;
+        	margin: 0 auto;
+        }
 		.nav>li{
 			list-style: none;
 		}
@@ -44,7 +50,7 @@
 			text-decoration: none;
 			float: left;
 			color: #fff;
-			height: 22px;
+			height: 20px;
 			list-style: none;
 			margin: 70px;
 		}
@@ -72,7 +78,7 @@
 <body>
 	<div class="container">
 			<ul class="nav">
-				<li><a href="file/index.html">学习与整理<img src="img/0.png" class="img"></a></li>
+				<li><a href="file/index.html">学习与整理<img src="img/0.png" class="img"></a></li> 
 				<li><a href="web_model/mulinson.html">模板与设计<img src="img/10.png" class="img"></a></li>
 				<li><a href="draw/index.html">画册<img src="img/13.png" class="img"></a></li>
 				<li><a href="../index.html">HOME<img src="img/15.png" class="img"></a></li>
