@@ -189,25 +189,16 @@
 		var showMessage = document.getElementById("showMessage").getElementsByTagName("li");
 	
 	// 介绍说明的显示与隐藏	
-        header[0].onmouseover = function(){
-        	showMessage[0].style.display = 'block';
-        }
-        header[1].onmouseover = function(){
-        	showMessage[1].style.display = 'block';
-        }
-        header[2].onmouseover = function(){
-        	showMessage[2].style.display = 'block';
-        }
-
-        header[0].onmouseout = function(){
-        	showMessage[0].style.display = 'none';
-        }
-        header[1].onmouseout = function(){
-        	showMessage[1].style.display = 'none';
-        }
-        header[2].onmouseout = function(){
-        	showMessage[2].style.display = 'none';
-        }
+                for(var i = 0;i<header.length;i++){
+                     (function(i){
+                     	header[i].onmouseover = function(){
+                     		showMessage[i].style.display = 'block';
+                     	}
+                      	header[i].onmouseout = function(){
+                     		showMessage[i].style.display = 'none';
+                     	}                    
+                     })(i);
+                }
 		// for(var i = 0;i<header.length;i++ ) {
 		// 	header[i].onmouseover = function(){	
 		// 		var i = parseInt(this.getAttribute('index'));
