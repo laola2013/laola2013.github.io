@@ -2,55 +2,37 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Mulinson.Notes</title>
+	<title>webApp</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-	<div class="header">
-		
-		<ul class="nav">
-			<li><img src="img/3.png" alt=""></li>
-			<li><a href="../index.html">HOME</a></li>
-			<li class="current">Git</li>
-			<li><a href="#">Javascript</a></li>
-			<li><a href="#">HTML与CSS</a></li>
-			<li><a href="#">jekyll</a></li>
-			<li><a href="#">实例讲解</a></li>
-			<li><a href="#">资源分享</a></li>
-		</ul>
-	</div>
-
-	<div class="container">
-		<div class="title"><h1>MuLinson.Notes</h1></div>
-		<div class="row">
-			<div>
-				<img src="img/git.png" alt="">
-				<h5>什么是Git呢？</h5>
-				<p>Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
-				<h5>分布式与集中式的区别在哪里？</h5>
-				<p>对于分布式而言，开发者可以把代码提交到本地，他可以把远端服务器上的仓库克隆到本地，在本地进行修改再提交到远端仓库中</p>
-				<h5>Git的优点</h5>
-				<p><strong>1.&nbsp;&nbsp;</strong>分布式开发强调个体</p>
-				<p><strong>2.&nbsp;&nbsp;</strong>可以有效的解决多个开发者关于项目修改等冲突问题</p>
-				<p><strong>3.&nbsp;&nbsp;</strong>支持离线工作</p>
-				<p><strong>4.&nbsp;&nbsp;</strong>速度快且灵活</p>
-				<h5><strong>Git的缺点</strong></h5>
-				<p>所谓金无足赤，人无完人嘛，对于Git也是一样的，提供了许多的便利的同时也会带来一些缺陷:</p>
-				<p>代码的保密性差，一旦你从远端克隆到本地后，你将可以看见所有的代码及其版本信息了（小主个人认为这是最主要的缺陷了）</p>
-				<h5>接下来讲讲Git的工作原理</h5>
-				<p>假设在你的本地已经有了克隆好的仓库，此时你的本地仓库是由git维护的“三棵树”组成的：第一个是你的工作目录，它持有实际文件；第二个是缓存区（index）它像一个临时区域，临时保存你的改动；最后是（HEAD）指向你最近一次提交的结果</p>
-				<h5>Git的下载</h5>
-				<p>下载地址：<a href="http://www.git-scm.com/download/" target="_blank">http://www.git-scm.com/download/</a></p>
-				<h5>接下来讲一些Git的具体用法，<span>（本来小主想把git的命令都列出来的，但是想想这并没有什么卵用啊，还是实际点举例并说明靠谱点）</span></h5>
-				<p>假如你在本地机器上没有自己的本地仓库，可是又想把自己写好的项目push到远端仓库里，可以执行以下操作：</p>
-				<p>git init&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//表示在当前目录中生成本地的git管理</p>
-				<p>git add -A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//表示添加所有的文件</p>
-				<p>git commit -m "******"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//表示对这次提交的注释</p>
-				<p>git git remote add origin master https:*******&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//将要上传到远程仓库的地址</p>
-				<p>git remote rm origin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//若上一步执行失败后输入再重复上一步操作</p>
-				<p>git push -u origin master&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//输入完后敲回车键便会出现要求你输入用户名的提示，用户名输入完后敲回车便出现提示输入用户密码的提示了</p>
+	<div data-role="page" id="index">
+		<div data-role="header" data-position="fixed">
+			<h1>MuLinson.Notes</h1>
+		</div>
+		<div role="main" class="ui-content">
+<!-- 			<a href="##" class="ui-btn ui-corner-all ui-btn-a">我是按钮</a>
+			<a href="##" class="ui-btn ui-corner-all ui-btn-b">我是按钮</a>
+			<input type="submit" value="我也是按钮"> -->
+			<ul data-role="listview" data-inset="ture">	
+				<li><a href="git.html" data-transition="slide">Git</a></li>
+				<li><a href="##" data-transition="slide">javascript</a></li>
+				<li><a href="##" data-transition="slide">Css</a></li>
+				<li><a href="##" data-transition="slide">jekyll</a></li>
+				<li><a href="##" data-transition="slide">实例讲解</a></li>
+			</ul>											
+		</div>
+		<div data-role="footer" data-position="fixed" class="ui-grid-a">
+			<div class="ui-block-a">
+			 	<img src="img/3.png">
 			</div>
-		</div> 
+			<div class="ui-block-b"><p><span>温馨提示：</span>学习笔记有些是小主的个人理解，若有发现错误可以告诉小主我，小主会及时修正</p>
+			</div>
+		</div>
 	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
 </body>
 </html>
