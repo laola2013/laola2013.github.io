@@ -224,6 +224,7 @@ img{
 	font-size: 13px;
 	display: block;
 	margin-bottom: 20px;
+	text-indent: 2em;
 }
 .footer_ul>li>img{
 	display: block;
