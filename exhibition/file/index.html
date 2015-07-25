@@ -187,6 +187,7 @@
 					<li><a href="photo/transform_pho/transform.html" class="nav">图片的旋转</a></li>
 					<li><a href="photo/photoshow.html" class="nav">图片文字说明</a></li>
 					<li><a href="photo/picture_down.html" class="nav">图片展示动画（显示与隐藏）</a></li>
+					<li><a href="powerpho/index.html" class="nav">幻灯片展示<strong>（注意：请用chrome浏览器进行浏览）</strong></a></li>
 				</ul>
 			</div>
 		</div>
@@ -220,39 +221,13 @@
 		$(document).ready(function(){
 			var menu = $("#menu");
 			var floors = $(".container").find(".home");
-			// var timer = true;
-			// menu.bind('click', function(){
-			// 	if(timer==true){
-			// 		setInterval(function(){	//do something
-			// 			var sltop = $(document).scrollTop();
-			// 			floors.each(function(){
-			// 				var currentTop = $(this).offset().top;
-			// 				if(sltop > currentTop){
-			// 					var top = sltop - currentTop;
-			// 					var speed = top/5;
-			// 					sltop = sltop - speed;
-			// 					}
-			// 				}else{
-			// 					var top = currentTop - sltop;
-			// 					var speed = top/5;	
-			// 					sltop = sltop + speed;
-			// 				}
-			// 			// console.log(currentTop);
-			// 		},300);
-					
-			// 	} else{timer = false;}
-			// })
-				// if(sltop )
-		// })
-
 			$(window).scroll(function(){
 				var sltop = $(document).scrollTop();
 				var currentId = "";
 				floors.each(function(){
 					var thisId = $(this);
 					var floorTop = thisId.offset().top;
-					// console.log(floorTop);
-					if(sltop > floorTop-100){
+					if(sltop > floorTop - 100){
 						currentId = "#" + thisId.attr("id");
 					} else{
 						return false;

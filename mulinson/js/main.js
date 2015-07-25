@@ -35,7 +35,7 @@ window.onload = function(){
     	timer = setInterval( function(){
             var changespeed = slTop/2
             document.documentElement.scrollTop = document.body.scrollTop = -slTop + changespeed; 
-    	},30);
+    	},300);
 
     	// 当滚动高度为0时清空timer
         if (!slTop) {

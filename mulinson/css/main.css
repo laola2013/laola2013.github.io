@@ -89,7 +89,7 @@ img{
 }
 .active{
 	border-radius: 10px;
-	border: 2px solid #fff ;
+	border: 2px solid #fff;
 	
 }
 .active>a{
