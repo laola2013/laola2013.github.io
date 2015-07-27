@@ -11,4 +11,9 @@ h5{
 	margin-top: 25px;
 	font-size: 0.8em !important;
 	color: #555555;
+	white-space: inherit !important;
+}
+
+h1,h5{
+	white-space: inherit !important;
 }
