@@ -2,6 +2,10 @@ p{
 	font-size: 12px;
 	text-indent: 2em;
 	color: #555555;
+	white-space: inherit !important;		
+}
+li{
+	white-space: inherit !important;
 }
 h5{
 	margin-top: 25px;
