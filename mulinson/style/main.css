@@ -1,0 +1,354 @@
+a
+{
+	text-decoration: none;
+}
+
+h1,h2,h3
+{
+	margin: 0;
+	color: #fff;
+	letter-spacing: 1px;
+	font-weight: 500;
+}
+
+li
+{
+	list-style: none;
+	display: inline-block;
+}
+
+p
+{
+	font-size: 13px;
+	color: #fff;
+	letter-spacing: 1px;
+}
+/* header部分的样式设置 */
+
+nav
+{
+	background-color: #3D3838;
+	height: 50px;
+}
+
+#banner
+{
+	background-color: rgba(0,0,0,.1);
+	height: 700px;
+}
+
+nav ul
+{
+	list-style: none;
+	margin: 0;
+	float: right;
+}
+
+nav ul li
+{
+	display: inline-block;
+	line-height: 50px;	
+	margin-right: 25px;	
+	
+}
+
+nav .logo
+{
+	float: left;
+	margin-left: 25px;	
+}
+
+nav .logo_name
+{
+	float: left;
+	line-height: 50px;
+	margin-left: 15px;
+}
+nav .logo a
+{   
+	display: inline-block;
+	height: 42px;
+	width:  42px;
+	border: 1px solid #aaa;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-top: 3px;
+}
+
+nav .logo a:hover
+{
+	border: 1px solid #E75576;;
+}
+nav .logo a img
+{
+	width: 100%;
+}
+
+nav .logo_name span
+{
+	display: inline-block;
+	color: #fff;
+	font-weight: 500;
+
+}
+
+nav ul li a
+{
+	line-height: 50px;
+	height: inherit;
+	display: inline-block;
+	color: #fff;
+	font-size: 13px;
+}
+
+nav ul li a:hover
+{
+	color: #E75576; 
+}
+
+#banner .inner h1
+{	
+	border-top: 1px solid #3D3838;
+	border-bottom:  1px solid #3D3838;
+	padding: 15px 0;
+	line-height: 44px;
+	color: #3D3838;
+}
+
+#banner .inner
+{
+	max-width: 300px;
+	text-align: center;	
+	margin: 0 auto;
+	position: relative;
+	top: 160px;	
+}
+
+button
+{
+	border: none;
+	color: #eee;
+	background-color: #3D3838;
+	padding: 15px 25px;
+	border-radius: 8px;
+}
+
+.inner_text
+{
+	line-height: 30px;
+	margin: 30px;
+	color: #3D3838;
+}
+
+#banner .inner .more
+{
+	margin-top: 250px;
+}
+
+/* container部分的样式设置 */
+
+/* first_section部分的样式设置 */
+
+.first_section
+{
+	text-align: center;
+	background-color: #E75576;
+	color: #fff;
+	padding: 120px 0;
+}
+
+.wrapper
+{
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+.wrapper p
+{
+	width: 45%;
+	margin: 0 auto;
+}
+
+.hr
+{
+	width: 60%;
+	height: 1px;
+	margin: 35px auto;
+	background-color: #fff;
+}
+.icon_group span
+{
+	display: inline-block;
+	height: 80px;
+	width: 80px;
+	background-color: #3D3838;
+	transform: rotate(45deg);
+	margin: 25px; 
+	border-radius: 8px;
+}
+.icon_group span i
+{
+	line-height: 80px;
+}
+.icon_group
+{
+	margin-top: 60px;
+}
+
+/* second_section部分的样式设置 */
+
+.second_section
+{
+	background-color: #2A2121;
+}
+.article_preview:nth-child(odd)
+{
+	background-color: rgba(255,255,255,.05);
+}
+.article_preview
+{
+	font-size: 0;
+}
+.second_section .img_section
+{
+	width: 45%;
+}
+.img_section img
+{
+	width: 100%;
+}
+.second_section .text_section
+{
+	width: 55%;
+}
+.text_section div
+{
+	width: 85%;	
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+.article_preview div
+{
+	float: left;
+}
+
+.text_section div h2
+{
+	margin-bottom: 30px;
+}
+
+.text_section div p
+{
+	text-indent: 2em;
+}
+.article_preview:after
+{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.text_section h2
+{
+	color: #fff;
+	font-size: 22px;
+}
+
+.thirsd_section
+{
+	background-color: #4DA5D4;
+	text-align: center;
+	padding: 80px 0;
+}
+.header_wrapper h2
+{
+	color: #fff;
+}
+
+.card_group
+{
+	margin-top: 60px;
+}
+.card_group div
+{
+	width: 50%;
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-sizing: border-box;
+	box-sizing: border-box;
+	padding: 20px 25px;
+}
+.card_group:after
+{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.card:first-child
+{
+	background-color: rgba(0,0,0,.04);
+}
+.card:nth-child(2)
+{
+	background-color: rgba(0,0,0,.08);
+}
+.card:nth-child(3)
+{
+	background-color: rgba(0,0,0,.12);
+}
+.card:nth-child(4)
+{
+	background-color: rgba(0,0,0,.16);
+}
+.card:nth-child(5)
+{
+	background-color: rgba(0,0,0,.20);
+}
+.card:nth-child(6)
+{
+	background-color: rgba(0,0,0,.24);
+}
+
+.footer_wrapper
+{
+	height: 450px;
+	background-color: rgba(0,0,0,.1);
+}
+.main_wrapper
+{
+	background-image: url(../img/banner.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+.footer_info
+{
+	background-color: #3D3838;
+}
+.footer_info ul
+{
+	width: 1080px;
+	margin: 0 auto;
+	padding: 70px 0;
+	text-align: center;
+}
+
+.footer_info ul li a
+{
+	height: 60px;
+	width: 60px;
+	color: #fff;
+	margin:0 20px;
+	display: inline-block;
+	line-height: 60px;
+}
+
+.footer_info ul li a:hover i
+{
+	color: #E75576;
+}
