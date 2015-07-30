@@ -3,7 +3,10 @@ a
 	text-decoration: none;
 }
 
-h1,h2,h3
+body{
+	font-family: '微软雅黑';
+}
+h1,h2,h3,h5
 {
 	margin: 0;
 	color: #fff;
@@ -106,6 +109,15 @@ nav ul li a:hover
 	color: #E75576; 
 }
 
+#banner .inner
+{
+	width: 350px;
+	text-align: center;	
+	margin: 0 auto;
+	position: relative;
+	top: 160px;	
+}
+
 #banner .inner h1
 {	
 	border-top: 1px solid #3D3838;
@@ -113,17 +125,41 @@ nav ul li a:hover
 	padding: 15px 0;
 	line-height: 44px;
 	color: #3D3838;
+	width: 100%;
+	animation: myleft 1.2s 1s;
+	-moz-animation: myleft 1.2s 1s;
+	-webkit-animation: myleft 1.2s 1s;
+	-o-animation: myleft 1.2s 1s;
 }
-
-#banner .inner
+@keyframes myleft
 {
-	max-width: 300px;
-	text-align: center;	
-	margin: 0 auto;
-	position: relative;
-	top: 160px;	
+	0 {opacity: 0;margin-left: 0;}
+	50% {opacity: 0.5;margin-left: 80px;}
+	100% {opacity: 1;margin-left: 0}
+}
+@-moz-keyframes myleft
+{
+	0 {opacity: 0;margin-left: 0;}
+	50% {opacity: 0.4;margin-left: 80px;}
+	100% {opacity: 1;margin-left: 0}
 }
 
+@-webkit-keyframes myleft
+{
+	0 {opacity: 0;margin-left: 0;}
+	50% {opacity: 0.5;margin-left: 80px;}
+	100% {opacity: 1;margin-left: 0}
+}
+@-o-keyframes myleft
+{
+	0 {opacity: 0;margin-left: 0;}
+	50% {opacity: 0.5;margin-left: 80px;}
+	100% {opacity: 1;margin-left: 0}
+}
+#banner .inner h1
+{
+	opacity: 1;
+}
 button
 {
 	border: none;
@@ -133,18 +169,92 @@ button
 	border-radius: 8px;
 }
 
-.inner_text
+#banner .inner h5
 {
-	line-height: 30px;
-	margin: 30px;
+	line-height: 100px;
 	color: #3D3838;
+	animation: myright 1.2s 1s;
+	-moz-animation: myright 1.2s 1s;
+	-webkit-animation: myright 1.2s 1s;
+	-o-animation: myright 1.2s 1s;
+}
+@keyframes myright
+{
+	0 {opacity: 0;margin-right: 0;}
+	50% {opacity: 0.5;margin-right: 80px;}
+	100% {opacity: 1;margin-right: 0}
+}
+@-moz-keyframes myright
+{
+	0 {opacity: 0;margin-right: 0;}
+	50% {opacity: 0.5;margin-right: 80px;}
+	100% {opacity: 1;margin-right: 0}
 }
 
+@-webkit-keyframes myright
+{
+	0 {opacity: 0;margin-right: 0;}
+	50% {opacity: 0.5;margin-right: 80px;}
+	100% {opacity: 1;margin-right: 0}
+}
+@-o-keyframes myright
+{
+	0 {opacity: 0;margin-right: 0;}
+	50% {opacity: 0.5;margin-right: 80px;}
+	100% {opacity: 1;margin-right: 0}
+}
+#banner .inner span
+{
+	height: 40px;
+	width: 	40px;
+	display: block;	
+	position: absolute;	
+	top: 360px;
+	left: 50%;
+	margin-left: -20px;
+	-animation: mytop 1.8s linear 1s infinite alternate;
+	-webkit-animation: mytop 1.8s linear 1s infinite alternate;
+	-moz-animation: mytop 1.8s linear 1s infinite alternate;
+	-o-animation: mytop 1.8s linear 1s infinite alternate;
+}
+
+@keyframes mytop
+{
+	0 {color: #3D3838;opacity:0;top: 360px;}
+	60% {color: #E75576;opacity:0.8;top: 420px;}
+	100% {color: #3D3838;opacity:1;top: 360px}
+}
+@-webkit-keyframes mytop
+{
+	0 {color: #3D3838;opacity:0;top: 360px;}
+	60% {color: #E75576;opacity:0.8;top: 420px;}
+	100% {color: #3D3838;opacity:1;top: 360px}
+}
+@-moz-keyframes mytop
+{
+	0 {color: #3D3838;opacity:0;top: 360px;}
+	60% {color: #E75576;opacity:0.8;top: 420px;}
+	100% {color: #3D3838;opacity:1;top: 360px}
+}
+@-o-keyframes mytop
+{
+	0 {color: #3D3838;opacity:0;top: 360px;}
+	60% {color: #E75576;opacity:0.8;top: 420px;}
+	100% {color: #3D3838;opacity:1;top: 360px}
+}
 #banner .inner .more
 {
 	margin-top: 250px;
 }
-
+.inner .more a
+{
+	color: #1f1f1f;
+	display: block;	
+}
+.inner .more a:hover
+{
+    color: #E75576;
+}
 /* container部分的样式设置 */
 
 /* first_section部分的样式设置 */
