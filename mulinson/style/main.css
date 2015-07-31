@@ -60,8 +60,7 @@ nav ul li
 {
 	display: inline-block;
 	line-height: 50px;	
-	margin-right: 25px;	
-	
+	margin-right: 25px;		
 }
 
 nav .logo
@@ -99,12 +98,16 @@ nav .logo a:hover
 	top: 50px;
 	left: 0;
 	padding: 0 15px;
-	background-color: rgba(255,255,255,.3);
+	background-color: rgba(255,255,255,.38);
 	transition: all 0.8s 0.2s;
 	-moz-transition: all 0.8s 0.2s;
 	-webkit-transition: all 0.8s 0.2s;
 	-o-transition: all 0.8s 0.2s;
 	opacity: 0;
+}
+.user_info p
+{
+	color: #1d1d1d;
 }
 nav .logo a:hover .user_info
 {
@@ -274,15 +277,21 @@ button
 #banner .inner .more
 {
 	margin-top: 250px;
+	width: 30px;
+	height: 20px;
+	text-align: center;
+	margin-left	: auto;
+	margin-right: auto;	
 }
 .inner .more a
 {
-	color: #1f1f1f;
+	color: #E75576;
 	display: block;	
+	font-size: 14px;
 }
 .inner .more a:hover
 {
-    color: #E75576;
+    color: #1d1d1d;
 }
 /* container部分的样式设置 */
 
