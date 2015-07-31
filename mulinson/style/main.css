@@ -26,6 +26,15 @@ p
 	color: #fff;
 	letter-spacing: 1px;
 }
+.card_group div,
+.logo .user_info
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-sizing: border-box;
+	box-sizing: border-box;	
+}
 /* header部分的样式设置 */
 
 nav
@@ -81,6 +90,26 @@ nav .logo a
 nav .logo a:hover
 {
 	border: 1px solid #E75576;;
+}
+.user_info
+{
+	height: 0;
+	width: 	100%;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	padding: 0 15px;
+	background-color: rgba(255,255,255,.3);
+	transition: all 0.8s 0.2s;
+	-moz-transition: all 0.8s 0.2s;
+	-webkit-transition: all 0.8s 0.2s;
+	-o-transition: all 0.8s 0.2s;
+	opacity: 0;
+}
+nav .logo a:hover .user_info
+{
+	height: 109px;
+	opacity: 1;
 }
 nav .logo a img
 {
@@ -384,11 +413,7 @@ button
 {
 	width: 50%;
 	float: left;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	-o-sizing: border-box;
-	box-sizing: border-box;
+
 	padding: 20px 25px;
 }
 .card_group:after
