@@ -140,7 +140,10 @@ nav ul li a:hover
 {
 	color: #E75576; 
 }
-
+.current
+{
+	color: #E75576 !important; 
+}
 #banner .inner
 {
 	width: 350px;
