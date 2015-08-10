@@ -1,0 +1,128 @@
+/* 样式重置 */
+ul
+{
+	margin: 0;
+	padding: 0;
+}
+a
+{
+	text-decoration: none;
+}
+p
+{
+	margin: 0;
+}
+
+/* header部分的样式重置 */
+nav
+{
+	height: 50px;
+	background-color: #3D3838;
+}
+.nav_ul
+{
+	float: right;
+}
+.nav_ul li
+{
+	display: inline-block;
+	margin-right: 25px;
+}
+.nav_ul li a
+{
+	display: inline-block;
+	line-height: 50px;
+	color: #fff;
+	font-size: 14px;
+}
+.nav_ul li a:hover
+{
+	color: #E75576;
+}
+.current
+{
+	color: #E75576 !important;
+}
+nav .logo 
+{
+	float: left;
+	margin-left: 25px;
+}
+nav .logo img
+{
+	height: 42px;
+	width: 42px;
+	border: 1px solid #aaa;
+	border-radius: 50%;
+	margin-top: 3px;
+}
+nav .logo_name
+{
+	float: left;
+	margin-left: 15px;
+}
+nav .logo_name span
+{
+	display: inline-block;
+	font-size: 15px;
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+}
+.banner
+{
+	height: 680px;
+	position: relative;
+}
+.banner .banner_title
+{
+	height: 160px;
+	width: 100%;
+	background-color: rgba(255,255,255,.3);
+	position: absolute;
+	bottom: 145px;
+}
+.banner_title .banner_img
+{ 
+	position: relative;
+	left: 450px;
+	width: 320px;
+}
+
+/*container部分的样式重置*/
+.container
+{
+	height: 700px;
+	background-color: #E75576;
+}
+
+/* footer部分的样式重置*/
+footer
+{
+	text-align: center;
+	padding: 80px 0;
+	background-color: #3D3838;
+}
+.footer_nav ul li
+{
+	display: inline-block;
+	margin: 0 25px;
+}
+.footer_nav ul li a
+{
+	display: inline-block;	
+	font-size: 	14px;
+	color: #fff;
+}
+.footer_nav ul li a:hover
+{
+	color: #E75576;
+}
+.wrapper
+{
+	background-image: url(../img/laola.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;	
+}
