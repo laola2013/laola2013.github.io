@@ -116,15 +116,15 @@
 	</body>
 	<script type="text/javascript">
 		function message (index){
-		 var div = document.getElementById('div' + index);
-		div.onmouseover = messageShow;
-		div.onmouseout = messageHide;
-		function messageShow(){
-		 	div.getElementsByTagName('a')[0].style.top = 0;
-		}
-		function messageHide(){
-			div.getElementsByTagName('a')[0].style.top = 165 + 'px';
-		}	
+			 var div = document.getElementById('div' + index);
+			div.onmouseover = messageShow;
+			div.onmouseout = messageHide;
+			function messageShow(){
+			 	div.getElementsByTagName('a')[0].style.top = 0;
+			}
+			function messageHide(){
+				div.getElementsByTagName('a')[0].style.top = 165 + 'px';
+			}	
 		}
 		message(1);
 		message(2);
