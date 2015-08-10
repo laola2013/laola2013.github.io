@@ -4,32 +4,40 @@
 	<meta charset="UTF-8">
 	<title>MuLinson.Exhibition</title>
 	<style type="text/css">
-		body{
+		body
+		{
 			font-family: '微软雅黑';
 			background-image: url(img/bck.jpg);
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
-		*{
+
+		*
+		{
 			margin: 0;
 			height: 0;
 		}
-		*,*:after,*:before{
+
+		*,*:after,*:before
+		{
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			-ms-box-sizing: border-box;
 			-o-box-sizing: border-box;
 			box-sizing: border-box;
 		}
-		.container{
+
+		.container
+		{
 			height:160px;
 			margin: 120px 0;
 			text-align: center;
-			background-color: rgba(255,255,255,.3);
-			
+			background-color: rgba(255,255,255,.3);			
 			transition: opacity 0.3s,transform 0.3s;
 		}
-		h3{
+
+		h3
+		{
 			display: inline-block;
 			width: 100%;
 			height: 30px;
@@ -37,14 +45,20 @@
 			color: #110219;
 			text-align: center;
 		}
-        .nav{
+
+        .nav
+        {
         	width: 840px;
         	margin: 0 auto;
         }
-		.nav>li{
+
+		.nav>li
+		{
 			list-style: none;
 		}
-		.nav>li>a{
+
+		.nav>li>a
+		{
 			position: relative;
 			font-size: 15px;
 			text-decoration: none;
@@ -54,11 +68,15 @@
 			list-style: none;
 			margin: 70px;
 		}
-		.nav>li>a:hover{
+
+		.nav>li>a:hover
+		{
 			color: #e7847a;
 			border-bottom: 1px solid #e7847a;
 		}
-		.img{
+
+		.img
+		{
 			position: absolute;
 			bottom: 100%;
 			margin-bottom: 10px;
@@ -67,21 +85,26 @@
 			height: 100px;
 			width: 100px;
 			opacity: 0;
-			transition: opacity 0.3s,transform 0.3s;
+			transition: opacity 0.3s;
 		}
-		.nav>li>a:hover .img{
+		
+		.img1
+		{
+			transfrom: ;
+		}
+		.nav>li>a:hover .img
+		{
 			opacity: 1;
-
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
 			<ul class="nav">
-				<li><a href="file/index.html">学习与整理<img src="img/0.png" class="img"></a></li> 
-				<li><a href="web_model/mulinson.html">模板与设计<img src="img/10.png" class="img"></a></li>
-				<li><a href="draw/index.html">画册<img src="img/13.png" class="img"></a></li>
-				<li><a href="../index.html">HOME<img src="img/15.png" class="img"></a></li>
+				<li><a href="file/index.html">学习与整理<img src="img/0.png" class="img img1"></a></li> 
+				<li><a href="web_model/mulinson.html">模板与设计<img src="img/10.png" class="img img2"></a></li>
+				<li><a href="draw/index.html">画册<img src="img/13.png" class="img img3"></a></li>
+				<li><a href="../index.html">HOME<img src="img/15.png" class="img img4"></a></li>
 			</ul>
 	</div>
 </body>
