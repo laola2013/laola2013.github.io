@@ -19,23 +19,34 @@
 			</div>
 			<ul class="nav_ul">
 				<li><a href="index.html">MuLinson</a></li>
-				<li><a href="#" class="current">日志</a></li>
-				<li><a href="#">芯情</a></li>
+				<li><a href="log.html">日志</a></li>
+				<li><a href="#" class="current">芯情</a></li>
 				<li><a href="#">沙漏</a></li>
 				<li><a href="#">HOME</a></li>
 			</ul>
 		</nav>
 		<div class="banner">
-			<div class="banner_img">
-				<div>
+			<div class="banner_img" id="banner_con">
+				<div style="left:-960px;" id="banner_demo">
+					<img src="img/sh6.jpg" alt="">
 					<img src="img/sh1.jpg" alt="">
 					<img src="img/sh2.jpg" alt="">
 					<img src="img/sh3.jpg" alt="">
 					<img src="img/sh4.jpg" alt="">
 					<img src="img/sh5.jpg" alt="">
 					<img src="img/sh6.jpg" alt="">
+					<img src="img/sh1.jpg" alt="">
 				</div>
-				<div class="banner_btn"></div>
+				<a href="javascript:;" class="btn_left" id="btn_left">&lt</a>
+				<a href="javascript:;" class="btn_right" id="btn_right">&gt</a>				
+			</div>
+			<div id="list_btn">
+				<span index="1" class="on"></span>
+				<span index="2"></span>
+				<span index="3"></span>
+				<span index="4"></span>
+				<span index="5"></span>
+				<span index="6"></span>
 			</div>			
 		</div>
 	</header>
@@ -61,4 +72,118 @@
 	</footer>
 </div>	
 </body>
+<script>
+	window.onload = function () {
+		var banner_demo	= document.getElementById("banner_demo");
+		var btn_right = document.getElementById("btn_right");
+		var btn_left = document.getElementById("btn_left");
+		var banner_con = document.getElementById("banner_con");
+		var list_btn = document.getElementById("list_btn").getElementsByTagName("span");
+		var index = 1;
+		 // animation的作用是当demo_left执行时，其他的demo_left都不执行，以免动画出现不连贯等问题
+		var animation = false;
+
+		function demo_left (offset) {
+			animation = true;
+			var newleft = parseInt(banner_demo.style.left) + offset;
+			var time = 300;
+			var interval = 15;
+			var speed = offset/(time/interval);
+			var timer = null;
+
+			function go () {
+				if( (speed > 0 && parseInt(banner_demo.style.left) < newleft) ||
+					(speed < 0 && parseInt(banner_demo.style.left) > newleft) ) {
+					banner_demo.style.left = speed + parseInt(banner_demo.style.left) + 'px';
+					setTimeout(go,interval);
+				} else {
+					animation = false;
+					banner_demo.style.left = newleft + 'px';
+					if (newleft > -960) {
+						banner_demo.style.left = -5760 + 'px';
+					}
+					if (newleft < -5760) {
+						banner_demo.style.left = -960 + 'px';
+					}
+				}
+			}
+			go();
+		}
+
+		function showButton () {
+			for(var i = 0;i<list_btn.length;i++) {
+				if(list_btn[i].className == "on") {
+					list_btn[i].className = "";
+				}
+			}
+			list_btn[index-1].className	= "on";
+		}
+
+		function play () {
+			timer = setInterval( function (){
+				btn_right.onclick();
+			},3000 )
+		}
+
+		function stop () {
+			clearInterval(timer);
+		}
+
+		btn_left.onclick = function	() {
+			if(index == 1) {
+				index = 6;
+			} else {
+				index -= 1;				
+			}
+		    showButton();
+		    if(animation == false) {
+		    	demo_left (960);
+		    }	
+		}
+
+		btn_right.onclick = function () {
+			if(index == 6) {
+				index = 1;
+			} else {
+				index += 1;			
+			}
+			showButton();
+			if(animation == false) {
+				demo_left (-960);
+			}
+		}
+
+		for(var i = 0;i < list_btn.length;i++) {
+			(function (i) {
+				list_btn[i].onclick = function () {
+					if(list_btn[i].className == "on") {
+						return;
+					}
+					var myIndex = parseInt(this.getAttribute("index"));
+					var offset = -960*(myIndex - index);
+					index = myIndex;					
+					
+					showButton();
+					if(animation == false) {
+						demo_left(offset);
+					}
+				}
+			})(i)
+		}
+
+		banner_con.onmouseover = function () {
+			btn_left.style.display = "block";
+			btn_right.style.display = "block";
+			stop();
+		}
+
+		banner_con.onmouseout = function () {
+			btn_left.style.display = "none";
+			btn_right.style.display = "none";
+			play();
+		}
+
+		play();
+	}
+</script>
 </html>
