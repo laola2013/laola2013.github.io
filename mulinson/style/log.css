@@ -1,4 +1,8 @@
 /* 样式重置 */
+body
+{
+	font-family: '微软雅黑'；
+}
 ul
 {
 	margin: 0;
@@ -11,6 +15,11 @@ a
 p
 {
 	margin: 0;
+}
+h5
+{
+	margin: 0;
+	padding: 0;
 }
 
 /* header部分的样式重置 */
@@ -121,13 +130,47 @@ nav .logo_name span
 	from { opacity: 0;width: 0; }
 	to { opacity: 1;width: 320px; }
 }
+
 /*container部分的样式重置*/
 .container
 {
-	height: 700px;
-	background-color: #E75576;
+	background-color: #74CECE;
 }
-
+section
+{
+	padding: 60px 0;
+}
+.container .text
+{
+	width: 1100px;
+	padding: 15px;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	margin: 0 auto;
+}
+.text:nth-child(odd){
+	background-color: rgba(0,0,0,.06);
+}
+.text:nth-child(even){
+	background-color: rgba(0,0,0,.12);
+}
+.text .data
+{
+	margin-bottom: 10px;
+	text-indent: left;
+}
+.data h5
+{
+	color: #F2F3A4;
+}
+.text .log_text p
+{
+	font-size: 13px;
+	line-height: 25px;
+	letter-spacing: 1px;
+	text-indent: 2em;
+	color: #fff;
+}
 /* footer部分的样式重置*/
 footer .footer_wrapper
 {
@@ -142,7 +185,7 @@ footer .footer_nav
 .footer_nav ul li
 {
 	display: inline-block;
-	margin: 0 25px;
+	margin: 0 35px;
 }
 .footer_nav ul li a
 {
