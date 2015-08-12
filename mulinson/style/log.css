@@ -129,7 +129,11 @@ nav .logo_name span
 }
 
 /* footer部分的样式重置*/
-footer
+footer .footer_wrapper
+{
+	height: 450px;
+}
+footer .footer_nav
 {
 	text-align: center;
 	padding: 80px 0;
