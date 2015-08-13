@@ -1,4 +1,8 @@
 /* 样式重置 */
+body
+{
+	font-family: '微软雅黑';
+}
 ul
 {
 	margin: 0;
@@ -72,7 +76,6 @@ nav .logo_name span
 .banner
 {
 	height: 540px;
-	position: relative;
 	background-color: rgba(0,0,0,.3);
 }
 .banner .banner_img
@@ -80,18 +83,19 @@ nav .logo_name span
 	width: 960px;
 	height: 540px;
 	margin: 0 auto;
-	position: relative;
+	position: absolute;
 	overflow: hidden;
-	content: '';
+/*	content: '';
 	display: block;
-	clear: both;
+	clear: both;*/
+	left: 50%;
+	margin-left: -480px;
 }
 .banner_img div
 {
 	width: 8640px;
 	height: 540px;
 	position: absolute;
-	left: -960px;
 }
 .banner_img div img
 {
@@ -128,19 +132,22 @@ nav .logo_name span
 #list_btn
 {
 	position: absolute;	
-	bottom: 25px;
+	bottom: 15px;
 	left: 50%;
-	margin-left: -25px;
+	margin-left: -50px;
 	background-color: rgba(0,0,0,.3);
 	border-radius: 15px;
-	padding: 5px 10px;
+	padding: 3px 6px;
+	height: 14px;
+	width: 110px;
+	line-height: 14px;
 }
 #list_btn span
 {
 	height: 10px;
 	width: 10px;
 	background-color: #fff;
-	border: 2px solid #aaa;
+	border: 2px solid #ccc;
 	display: inline-block;
 	z-index: 8;	
 	border-radius: 50%;
@@ -151,6 +158,7 @@ nav .logo_name span
 {
 	background-color: #E75576 !important;
 }
+
 /*container部分的样式重置*/
 .container
 {
