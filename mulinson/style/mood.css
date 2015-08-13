@@ -82,6 +82,9 @@ nav .logo_name span
 	margin: 0 auto;
 	position: relative;
 	overflow: hidden;
+	content: '';
+	display: block;
+	clear: both;
 }
 .banner_img div
 {
