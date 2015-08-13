@@ -1,0 +1,226 @@
+/* 样式重置 */
+body
+{
+	font-family: '微软雅黑'；
+}
+ul
+{
+	margin: 0;
+	padding: 0;
+}
+li
+{
+	list-style: none;
+}
+a
+{
+	text-decoration: none;
+}
+p
+{
+	margin: 0;
+}
+h5
+{
+	margin: 0;
+	padding: 0;
+}
+
+/* header部分的样式重置 */
+nav
+{
+	height: 50px;
+	background-color: #3D3838;
+}
+.nav_ul
+{
+	float: right;
+}
+.nav_ul li
+{
+	display: inline-block;
+	margin-right: 25px;
+}
+.nav_ul li a
+{
+	display: inline-block;
+	line-height: 50px;
+	color: #fff;
+	font-size: 14px;
+}
+.nav_ul li a:hover
+{
+	color: #E75576;
+}
+.current
+{
+	color: #E75576 !important;
+}
+nav .logo 
+{
+	float: left;
+	margin-left: 25px;
+}
+nav .logo img
+{
+	height: 42px;
+	width: 42px;
+	border: 1px solid #aaa;
+	border-radius: 50%;
+	margin-top: 3px;
+}
+nav .logo_name
+{
+	float: left;
+	margin-left: 15px;
+}
+nav .logo_name span
+{
+	display: inline-block;
+	font-size: 15px;
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+}
+.banner
+{
+	height: 540px;
+	position: relative;
+}
+
+/*container部分的样式重置*/
+.container
+{
+	background-color: rgba(0,0,0,.3);
+}
+.container_img
+{
+	width: 1000px;
+	height: 600px;
+	background-color: #fff;
+	margin: 0 auto;
+}
+.demo_con
+{
+	height: 200px;
+	width: 200px;
+	float: left;
+	position: relative;
+}
+.demo_con .hover_a
+{
+	display: inline-block;
+	height: 200px;
+	width: 200px;
+}
+.hover_a .bck_a
+{
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	z-index: 29;
+	opacity: 0.3;
+	background-color: #000;
+}
+.hover_info
+{
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	background-color: #BE3948;
+	z-index: 45;
+	display: none;
+	text-align: center;
+	transition: 0.3s 6s;
+}
+.demo_con:hover .hover_info
+{
+	display: block;
+}
+.hover_a:hover .bck_a
+{
+	opacity: 0.05;
+}
+.hover_a img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+.items_demo
+{
+	height: 100px;
+	width: 100px;
+	position: relative;
+	float: left;
+	display: inline-block;
+}
+.items_info
+{
+	height: 100px;
+	width: 200px;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	background-color: #BE3948;
+	z-index: 120;
+	display: none;
+}
+.items_demo:hover .items_info
+{
+	display: block;
+}
+.items_demo:nth-child(odd)
+{
+	background-color: rgba(0,0,0,.12);
+}
+.items_bck
+{
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	z-index: 43;
+	background-color: #000;
+	opacity: 0.3;
+}
+.items_demo a:hover .items_bck
+{
+	opacity: 0.05;
+}
+/* footer部分的样式重置*/
+footer .footer_wrapper
+{
+	height: 450px;
+}
+footer .footer_nav
+{
+	text-align: center;
+	padding: 80px 0;
+	background-color: #3D3838;
+}
+.footer_nav ul li
+{
+	display: inline-block;
+	margin: 0 35px;
+}
+.footer_nav ul li a
+{
+	display: inline-block;	
+	font-size: 	14px;
+	color: #fff;
+}
+.footer_nav ul li a:hover
+{
+	color: #E75576;
+}
+.wrapper
+{
+	background-image: url(../img/time.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;	
+}
