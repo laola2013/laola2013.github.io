@@ -8,6 +8,20 @@ ul
 	margin: 0;
 	padding: 0;
 }
+p{
+	font-size: 14px;
+	color: #fff;
+	letter-spacing: 1px;
+	line-height: 20px;
+}
+h5{
+	color: #fff;
+	margin-bottom: 25px !important;
+}
+img
+{
+	width: 100%;
+}
 li
 {
 	list-style: none;
@@ -128,12 +142,18 @@ nav .logo_name span
 	width: 200px;
 	position: absolute;
 	top: 0;
-	left: 100%;
+	left: 200px;
 	background-color: #BE3948;
 	z-index: 45;
 	display: none;
-	text-align: center;
-	transition: 0.3s 6s;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	padding: 10px;
+}
+.info_right
+{
+	left: -200px !important;
 }
 .demo_con:hover .hover_info
 {
@@ -168,14 +188,15 @@ nav .logo_name span
 	background-color: #BE3948;
 	z-index: 120;
 	display: none;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	padding: 10px;
 }
+
 .items_demo:hover .items_info
 {
 	display: block;
-}
-.items_demo:nth-child(odd)
-{
-	background-color: rgba(0,0,0,.12);
 }
 .items_bck
 {
