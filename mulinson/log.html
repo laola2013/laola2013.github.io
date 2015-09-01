@@ -34,7 +34,7 @@
 		</div>
 	</header>
 	<div class="container">
-		<section>
+		<section id="container">
 			<div class="text">
 				<div class="data">
 					<h5>2015.8.10&nbsp;&nbsp;<span>晴</span></h5>
@@ -146,6 +146,11 @@
 				</div>
 			</div>
 		</section>
+		<div id="btns">
+			<input type="button" value="1" index="1">
+			<input type="button" value="2" index="2">
+			<input type="button" value="3" index="3">
+		</div>
 	</div>
 	<footer>
 		<div class="footer_wrapper"></div>
@@ -159,6 +164,34 @@
 			</ul>
 		</div>
 	</footer>
-</div>	
+</div>
+<script type="text/javascript">
+	window.onload = function() {
+		var xmlhttp = null;
+		var btns = document.getElementById("btns").getElementsByTagName("input");
+		for(var i=0;i<btns.length;i++) {
+			( function (i){
+				btns[i].onclick = function(){
+					var myIndex = parseInt(this.getAttribute("index"));
+					createHttp(myIndex);
+				}
+			} )(i);
+		}
+	}
+	function createHttp (index) {
+		if(window.XMLHttpRequest) {
+			xmlhttp	= new XMLHttpRequest();
+		} else {
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange = function () {
+			if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				document.getElementById("container").innerHTML = xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("GET","data/log" + index +".html",true);
+		xmlhttp.send();
+	}
+</script>	
 </body>
 </html>

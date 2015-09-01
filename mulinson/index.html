@@ -40,7 +40,7 @@
 					</h5>
 					<button>了解我</button>
 					<span><i class="fa fa-angle-double-down fa-2x"></i></span>
-					<div class="more"><a href="#">更多</a></div>
+					<div class="more" id="more"><a href="javascript:;">更多</a></div>
 				</div>
 			</div>
 		</header>
@@ -65,7 +65,7 @@
 				</div>
 			</section>
 			<section class="second_section">
-				<div class="article_preview">
+				<div class="article_preview" id="more_info">
 					<div class="img_section">
 						<img src="img/pic01.jpg" alt="">
 					</div>
@@ -204,4 +204,25 @@
 		</footer>
 	</div>
 </body>
+<script>
+	var more_btn = document.getElementById("more");
+	var more_info = document.getElementById("more_info");
+	var timer = null;
+	more_btn.onclick = function () {
+		
+		timer = setInterval( function () {
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			var speed = (more_info.offsetTop - scrollTop)/2;
+			speed = Math.ceil(speed);
+			document.documentElement.scrollTop = document.body.scrollTop = scrollTop + speed;
+		},100 );		
+	}
+	
+	window.onscroll = function () {
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		if(more_info.offsetTop == scrollTop) {
+			clearInterval(timer);
+		}
+	}
+</script>
 </html>
