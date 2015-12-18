@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MuLinson.Notes</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style>
+
+	</style>
+</head>
+<body>
+	<div data-role="page" id="index2">
+		<div data-role="header">
+			<h1>MuLinson.Notes > sublime</h1>
+		</div>
+		<div role="main" class="ui-content">
+			<p><a href="index.html" data-transition="slide">返回</a></p>
+			<ul data-role="listview" data-inset="ture" class="page_ul">
+				<li>
+					<p>
+						<strong>这篇是关于sublime text3编辑器的常用插件以及对应的快捷键，小木不会把所有的插件列出来，只会把小木自己常用到的插件分享给大家（PS：仅限于Windows系统）</strong>
+					</p>
+				</li>
+				<li>
+					<h5>首先要先安装Package Control组件</h5>
+					<p>
+						在安装所有插件之前，我们需要安装一个叫Package Control的组件，打开sublime text3后，使用快捷键Ctrl + `（或者是打开菜单中的View > Show Console），打开后将下列代码粘贴到面板里的输入框中并敲回车键就可以了
+					</p>
+					<p>
+						
+						import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
+					</p>					
+				</li>
+				<li>
+					<h5>接下来就可以安装你想要的插件了</h5>
+					<p>
+						首先打开菜单栏中的Preferences &gt; Package Control &gt; Install Package,接着输入插件名称便可以了
+					</p>
+				</li>
+				<li>
+					<h5>Emmet</h5>
+					<p>
+						这款插件对于前端开发的童鞋是必备的，它可以帮你编辑好预备代码，就素什么文档声明，头文件之类的balabala...，如果每编辑一个新的HTML文件，都要重新输入那些基础代码，真真是很繁琐的事情
+					</p>
+				</li>
+				<li>
+					<h5>Tag</h5>
+					<p>
+						这款插件可以帮助我们整理代码，使用快捷键Ctrl + Alt + F就可以将选中的代码段排列整齐了，比起我们手动整理的话要节省很多时间
+					</p>
+				</li>
+				<li>
+					<h5>ConvertToUTF8</h5>
+					<p>
+						这款插件可以防止出现中文乱码的现象，比如说今天要帮某某修改一下代码，结果用自己的sublime编辑器打开一看，卧槽，尼玛的中文一堆乱码。。。接下的烂摊子就可以交给这款插件解决了
+					</p>
+					<p>
+						有些童鞋可能会好奇为什么中文会出现乱码现象，那小木就说说自己知道的吧，归咎原因就是编码方式不一致导致的，可能是编辑器一开始采用的编码方式就不一致，其次也可能是文件自身定义的编码方式不一致，不过前者比较容易被忽略。
+					</p>
+					<p>
+						<strong>注意事项：</strong>安装完插件后需要重启sublime以便激活刚刚装完的插件（严重点的需要重新下载安装sublime，小木是被这么坑过一次 = =）
+					</p>
+				</li>
+				<li>
+					<p>	
+					    除了以上的插件外，sublime还有许许多多提供不同功能的插件（例如：Highlighter，Alignment等插件，童鞋们可以根据自己的需要的去安装）。比起DW（Dreamweaver）来，小木还是比较喜欢sublime，原因轻巧，功能强大。接下来小木会给小伙伴们分享一些sublime自身的一些快捷功能；
+					</p>
+				</li>
+				<li>
+					<h5>自动补全代码</h5>
+					<p>
+						只需要输入代码首字母后，使用tab键便可以自动补全代码,而sublime也具有提示代码的功shujian，此外还有记忆功能，它可以记下开发者在文件中所有自身定义的函数名以shujian变量名；
+					</p>
+				</li>
+				<li>
+					<h5>让光标同时在多行进行输入操作</h5>
+					<p>
+						让光标停留在我们想输入的地方，然后同时按住shift + 鼠标右键,接着拖动鼠标下滑，便可以同时让光标focus多行了；
+					</p>
+				</li>
+				<li>
+					<h5>快捷键让字体放大缩小</h5>
+					<p>
+						按住Ctrl,然后滑动鼠标便可以调整代码字体的大小了
+					</p>
+				</li>
+				<li>
+					<h5>聚焦并编辑多个关键代码段</h5>
+					<p>
+						首先选中我们想要聚焦的代码段，然后按住Ctrl + D,便可以聚焦下一个相同的代码段，想要聚焦更多的代码段，重复执行上一步操作即可；（若不想聚焦当前的代码段，按住Ctrl + K便可以取消当前的focus）
+					</p>
+				</li>
+				<li>
+					<h5>让停留在结束标签前的光标进入标签内</h5>
+					<p>
+						在编辑html文件时，开始标签与结束标签往往是对齐形式存在的（按规整的代码来说），内容体夹在两标签内,有时候会出现输入内容时两标签相邻两行，而光标停留在结束标签前，此时按住Ctrl + Shift + Enter就可以让光标夹在两标签之间，接着就可以输入内容体了；
+					</p>
+				</li>
+				<li>
+
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+</body>
+</html>
