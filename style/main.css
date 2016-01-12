@@ -86,10 +86,10 @@ body
 .header_title
 {
 	display: flex;
-	display: -moz-box;   
+/*	display: -moz-box;   
 	display: -ms-flexbox;    
 	display: -webkit-box;      
-	display: -webkit-flex; 
+	display: -webkit-flex; */
 	flex-direction: column;
 	justify-content: center;
 	flex-grow: 1;
@@ -100,14 +100,14 @@ body
 .con
 {
 	display: flex;
-	display: -moz-box;   
+/*	display: -moz-box;   
 	display: -ms-flexbox;  
 	display: -webkit-box;      
-	display: -webkit-flex;
+	display: -webkit-flex;*/
 	flex-direction: row;
-	-ms-flex-direction: row;
+	/*-ms-flex-direction: row;*/
 	justify-content: space-between;
-	-ms-justify-content: space-between;
+	/*-ms-justify-content: space-between;*/
 }
 .con>a
 {
