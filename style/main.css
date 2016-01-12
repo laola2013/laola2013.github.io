@@ -1,3 +1,4 @@
+/* 导入所需的字体 */
 @font-face{
 	font-family: "Raphaelicons";
 	src: url(fonts/raphaelicons-webfont.eot) format("eot"),
@@ -7,151 +8,270 @@
 	font-weight: normal;
 	font-style: none;
 }
-body
-{
-	font-family: '微软雅黑';
+body{
+	font-family: "微软雅黑";
+	font-size: 15px;
+	font-weight: 400px;
+	overflow: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
 }
-*,*::after,*::before
-{
-	box-sizing: inherit;
-}
-.section
-{
-	height: inherit;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	height: inherit;
-	height:100%;
-	width: 100%;
-}
-
-/* first_section样式 */
-.wrapper
-{
-	height: 100%;
-	width: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-.container{
-	position: relative;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	top: 0;
-}
-.first_section
-{
-	background-image: url(../img/bg1.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-}
-[data-icon]:after
-{
-	content: attr(data-icon);
-	height: 80px;
-	width: 100%;
-	display: block;
-	font-size: 80px;
-	color: #fff;
-	font-family: "Raphaelicons";
-}
-.second_section
-{
-	background-image: url(../img/bg2.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-}
-.third_section
-{
-	background-image: url(../img/bg3.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-}
-.fourth_section
-{
-	background-image: url(../img/bg4.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-}
-.fifth_section
-{
-	background-image: url(../img/bg5.jpg);
-	background-repeat: no-repeat;
-	/*background-size: 100% auto;*/
-	background-position: center;
-}
-.header_title
-{
-	display: flex;
-/*	display: -moz-box;   
-	display: -ms-flexbox;    
-	display: -webkit-box;      
-	display: -webkit-flex; */
-	flex-direction: column;
-	justify-content: center;
-	flex-grow: 1;
-	margin-left: 10%;
-	color: #FFF;
-	/*padding-right: 150px;*/
-}
-.con
-{
-	display: flex;
-/*	display: -moz-box;   
-	display: -ms-flexbox;  
-	display: -webkit-box;      
-	display: -webkit-flex;*/
-	flex-direction: row;
-	/*-ms-flex-direction: row;*/
-	justify-content: space-between;
-	/*-ms-justify-content: space-between;*/
-}
-.con>a
-{
-	width: 50%;
-	height: auto;
-	background-color: rgba(0,0,0,.45);
-	transition: all 0.6s;
-	display: inline-block;
-	padding: 35px;
-	box-sizing: border-box;
-	color: #fff;
+a{
 	text-decoration: none;
-	font-size: 14px;
-	line-height: 26px;
-	text-indent: 2em;
-}
-.header_title h1,
-.header_title h3
-{
-	font-weight: 500;
-}
-.con>a:hover
-{
-	background-color: rgba(0,0,0,.68);
 }
 
-@media screen and (max-width: 540px) and (min-width: 0){
-	.con>a{
-		font-size: 10px;
-		padding: 10px;
-		line-height: 18px;
-		width: 100%;
-		margin: 0 !important;
+/* 与后面的scroll-con以及后面的section
+能否撑满整个可视页面有关 */
+.container{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/* 与后面的scroll-con以及后面的section
+能否撑满整个可视页面有关 */
+.navbar{
+	height: 100%;
+	width: 100%;
+}
+.navbar > input,
+.navbar > a{
+	width: 20%;
+	height: 35px;
+	line-height: 35px;
+	position: fixed;
+	bottom: 0;
+}
+
+.navbar > input{
+	opacity: 0;
+	z-index: 10000;
+}
+.navbar > a{
+	z-index: 100;
+	font-weight: 600;
+	font-size: 16px;
+	background-color: #e23a6e;
+	color: #fff;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(151,24,64,.2);
+}
+.navbar > input:hover + a{
+	background-color: #ad244f;
+}
+#btn-1,
+#btn-1 + a{
+	left: 0;
+}
+#btn-2,
+#btn-2 + a{
+	left: 20%;
+}
+#btn-3,
+#btn-3 + a{
+	left: 40%;
+}
+#btn-4,
+#btn-4 + a{
+	left: 60%;
+}
+#btn-5,
+#btn-5 + a{
+	left: 80%;
+}
+
+.navbar input:checked + a,
+.navbar input:checked:hover + a{
+	background-color: #821134;
+}
+.navbar input:checked + a:after{
+	content: '';
+	height: 0;
+	width: 0;
+	border: 20px solid transparent;
+	border-bottom-color: #821134;
+	position: absolute;
+	bottom: 100%; 
+	left: 50%;
+	margin-left: -20px;
+}
+
+.scroll-con,
+.sc-panel{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.scroll-con{
+	left: 0;
+	top: 0;
+	transform: translate3d(0,0,0);
+	-webkit-ebackface-visibility: hidden;
+	transition: all 0.8s ease-in-out;
+}
+.sc-panel{
+	background-color: #fff;
+	overflow: hidden;
+}
+#btn-1:checked ~ .scroll-con{
+	transform: translateY(0%);
+}
+#btn-2:checked ~ .scroll-con{
+	transform: translateY(-100%);
+}
+#btn-3:checked ~ .scroll-con{
+	transform: translateY(-200%);
+}
+#btn-4:checked ~ .scroll-con{
+	transform: translateY(-300%);
+}
+#btn-5:checked ~ .scroll-con{
+	transform: translateY(-400%);
+}
+
+.tb{
+	height: 200px;
+	width: 200px;
+	background-color: #fa96b5;
+	position: absolute;
+	left: 50%;
+	margin-left: -100px;
+	transform: translateY(-100px) rotate(45deg);
+}
+/* 属性选择器 */
+[data-icon]:after{
+	content: attr(data-icon);
+	text-align: center;
+	height: 200px;
+	width: 200px;	
+	line-height: 200px;
+	color: #fff;
+	font-size: 80px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -100px 0 0 -100px;
+	transform: rotate(-45deg) translateY(25%);
+	font-family: "Raphaelicons";
+	text-shadow: 1px 1px 1px rgba(151,24,64,.2);
+}
+.sc-panel h2{
+	color: #e23a6e;
+	font-size: 54px;
+	font-weight: 600;
+	text-align: center;
+	width: 300px;
+	left: 50%;
+	top: 35%;
+	margin-top: -70px;
+	margin-left: -150px;
+	position: absolute;
+	text-shadow: 1px 1px 1px rgba(151,24,64,.2);
+}
+#btn-1:checked ~ .scroll-con #btn1 h2,
+#btn-2:checked ~ .scroll-con #btn2 h2,
+#btn-3:checked ~ .scroll-con #btn3 h2,
+#btn-4:checked ~ .scroll-con #btn4 h2,
+#btn-5:checked ~ .scroll-con #btn5 h2{
+	animation: moveDown 0.8s ease-in-out 0.3s backwards;
+}
+
+@keyframes moveDown{
+	0%{
+		transform: translateY(-60px);
+		opacity: 0;
 	}
-	.header_title h1{
-		font-size: 18px;
+	100%{
+		transform: translateY(0);
+		opacity: 1;
 	}
-	.header_title h3{
+}
+
+.sc-panel p{
+	position: absolute;
+	width: 80%;
+	font-size: 22px;
+	font-weight: 500;
+	text-align: center;
+	left: 10%;
+	top: 50%;
+	color: #e23a6e;
+	margin-top: -70px;
+	text-shadow: 1px 1px 1px rgba(151,24,64,.2);
+}
+
+#btn-1:checked ~ .scroll-con #btn1 p,
+#btn-2:checked ~ .scroll-con #btn2 p,
+#btn-3:checked ~ .scroll-con #btn3 p,
+#btn-4:checked ~ .scroll-con #btn4 p,
+#btn-5:checked ~ .scroll-con #btn5 p{
+	animation: moveUp 0.8s ease-in-out 0.3s backwards;
+}
+
+@keyframes moveUp{
+	0%{
+		transform: translateY(60px);
+		opacity: 0;
+	}
+	100%{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.bg-color{
+	background-color: #fa96b5;
+}
+.bg-color .tb{
+	background-color: #fff;
+}
+.bg-color h2{
+	color: #fff;
+}
+.bg-color p{
+	color: rgba(255,255,255,.8);
+}
+.bg-color [data-icon]:after{
+	color: #FA96B5;
+}
+
+/* 当浏览器的窗口大小小于等于768px时，
+相应的标题文字大小也发生变化 */
+@media screen and (min-width: 0) and (max-width: 768px){
+	.sc-panel h2{
+		font-size: 28px;
+	}
+	.sc-panel p{
 		font-size: 14px;
 	}
-	[data-icon]:after{
-		font-size: 45px;
+	.navbar > a{
+		font-size: 12px;
+		font-weight: 500;
 	}
-	.header_title{
-		padding: 45px 0;
+	.tb{
+		height: 120px;
+		width: 120px;
+		background-color: #fa96b5;
+		position: absolute;
+		left: 50%;
+		margin-left: -60px;
+		transform: translateY(-60px) rotate(45deg);
+	}
+	[data-icon]:after{
+		content: attr(data-icon);
+		text-align: center;
+		height: 120px;
+		width: 120px;
+		line-height: 120px;
+		color: #fff;
+		font-size: 45px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin: -60px 0 0 -60px;
+		transform: rotate(-45deg) translateY(25%);
+		font-family: "Raphaelicons";
+		text-shadow: 1px 1px 1px rgba(151,24,64,.2);
 	}
 }
