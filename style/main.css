@@ -86,9 +86,9 @@ body
 .header_title
 {
 	display: flex;
-	display: -moz-box;  /* Firefox */ 
-	display: -ms-flexbox;    /* IE10 */ 
-	display: -webkit-box;    /* Safari */  
+	display: -moz-box;   
+	display: -ms-flexbox;    
+	display: -webkit-box;      
 	display: -webkit-flex; 
 	flex-direction: column;
 	justify-content: center;
@@ -100,13 +100,12 @@ body
 .con
 {
 	display: flex;
-	display: -moz-box;  /* Firefox */ 
-	display: -ms-flexbox;    /* IE10 */ 
-	display: -webkit-box;    /* Safari */  
+	display: -moz-box;   
+	display: -ms-flexbox;  
+	display: -webkit-box;      
 	display: -webkit-flex;
 	flex-direction: row;
 	-ms-flex-direction: row;
-	/*flex-direction: row;*/
 	justify-content: space-between;
 	-ms-justify-content: space-between;
 }
@@ -140,6 +139,7 @@ body
 		font-size: 10px;
 		padding: 10px;
 		line-height: 18px;
+		width: 100%;
 		margin-left: 0 !important;
 	}
 	.header_title h1{
