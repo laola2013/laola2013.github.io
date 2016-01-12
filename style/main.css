@@ -86,6 +86,10 @@ body
 .header_title
 {
 	display: flex;
+	display: -moz-box;  /* Firefox */ 
+	display: -ms-flexbox;    /* IE10 */ 
+	display: -webkit-box;    /* Safari */  
+	display: -webkit-flex; 
 	flex-direction: column;
 	justify-content: center;
 	flex-grow: 1;
@@ -96,8 +100,15 @@ body
 .con
 {
 	display: flex;
+	display: -moz-box;  /* Firefox */ 
+	display: -ms-flexbox;    /* IE10 */ 
+	display: -webkit-box;    /* Safari */  
+	display: -webkit-flex;
 	flex-direction: row;
+	-ms-flex-direction: row;
+	/*flex-direction: row;*/
 	justify-content: space-between;
+	-ms-justify-content: space-between;
 }
 .con>a
 {
