@@ -140,7 +140,7 @@ body
 		padding: 10px;
 		line-height: 18px;
 		width: 100%;
-		margin: 2px 0 0 0 !important;
+		margin: 0 !important;
 	}
 	.header_title h1{
 		font-size: 18px;
