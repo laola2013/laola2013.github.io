@@ -2,55 +2,261 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE-edga,chrome=1">
-	<meta name="viewport" content="width = device-width ,initial-scale=1">
-	<link rel="stylesheet" href="style/normalize.css">
-	<link rel="stylesheet" type="text/css" href="style/main.css">
-	<title>Document</title>
+	<title>MuLinson</title>
+	<style type="text/css">
+	body{
+		font-family: '微软雅黑';
+		background-image: url(img/laola1.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: #aaa;
+	}
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.container{
+		height: 50px;
+		width: 530px;
+		margin: 80px auto;
+        text-align: center;
+	}
+	li{
+		list-style: none;
+	}
+	h1{
+		color: #ccc;
+		margin-bottom: 45px;
+		border-bottom: 2px solid #ccc;
+		padding: 10px;
+	}
+	#header{
+		height: 140px;
+		width: 	530px;
+	}
+	#message{
+		height: 60px;
+		width: 160px;
+		position: absolute;
+		bottom: 280px;
+		left: 170px;
+
+	}
+	#showMessage>li{
+	    border: 1px solid #fff;
+	    border-radius: 10px;
+	    font-size: 12px;
+	    color: #fff;
+	    padding: 5px;
+	    height: 70px;
+		width: 160px;
+		display: none;
+	}
+	#timer{
+		position: absolute;
+		cursor: pointer;
+		left: 45px;
+		height: 120px;
+		width: 120px;
+		border: 1px solid #fff;
+		text-align: center;
+		border-radius: 10px;
+		box-shadow: 5px 5px 10px #1d1d1d;
+	}
+	#timer>img{
+		position: absolute;
+		width: 92px;
+		height: 127px;
+		bottom: 118px;
+		left: 15px;
+	}
+	#showTime{		
+		margin-top: 35px;
+	}
+	#showTime>li{
+		font-size: 18px;
+		color: #fff;
+	}
+	#header>li{		
+		float: left;
+		margin-left: 28px;
+	}
+	#header>li>a{
+		display: block;
+		height: 120px;
+		width: 120px;
+		padding: 10px;
+		line-height: 120px;
+		text-align: center;
+		border-radius: 50%;
+		background-color: rgba(0,0,0,.3);
+		font-size: 22px;
+		color: #ccc;
+		text-decoration: none;
+	}
+	#header>li>a:hover,
+	#input_btn>a:hover input,
+	#come_in>a:hover
+	{
+		background-color: rgba(2,149,252,.5);
+		color: #fff;
+	}
+	input{
+		height: 35px;
+		width: 118px;
+		outline: none;
+		border: none;
+		border-radius: 6px;
+		background-color: rgba(0,0,0,.3);
+		padding: 0 8px;
+		margin-top: 8px;
+		color: #ccc;
+	}
+	#input_btn{
+		height: 180px;
+		width: 134px;
+		text-align: center;
+		margin: 15px auto;
+        display: none;
+	}
+	#input_btn>a{
+		text-decoration: none;
+	}
+	#come_in{
+		height: 35px;
+		width: 118px;
+		margin: 8px auto;
+        display: none;
+
+	}
+	#input_btn>a>input,
+	#come_in>a{
+		background-color: rgba(255,0,0,.5);
+		color: #ccc;
+	}
+	#come_in>a{
+		display:block; 
+		height: 35px;
+		width: 118px;
+		line-height: 35px;
+		text-decoration: none;
+		text-align: center;
+		border-radius: 6px;
+		font-size: 13px;
+	}
+	.img_ewm{
+		position: fixed;
+		bottom: 45px;
+		right: 45px;
+	}
+	.img_ewm img{
+		display: block;
+		height: 160px;
+		width: 160px;
+	}	
+	</style>
+	
 </head>
 <body>
+	<div id="message">
+		<ul id ="showMessage">
+			<li>里面有主银的个人资料哦</li>
+			<li>这是主银的私人小金库哦，里面放满了主银个人制作的小东西，想要访问的话快去找主人拿密钥吧</li>
+			<li>这是主银放学习笔记的地方哦，有兴趣的话去看看，说不定能帮你涨姿势呢</li>
+		</ul>
+	</div>
+	<div id="timer" style="bottom: 60px;">
+		<img src="img/7.png">
+		<ul id="showTime">
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<div class="img_ewm">
+		<img src="img/ewm.jpg">
+	</div>
 	<div class="container">
-		<div class="navbar">
-			<input type="radio" name="check-btn" checked="checked" id="btn-1" />
-			<a href="#btn1">navbar1</a>
-			<input type="radio" name="check-btn" id="btn-2" />
-			<a href="#btn2">navbar2</a>
-			<input type="radio" name="check-btn" id="btn-3" />
-			<a href="#btn3">navbar3</a>
-			<input type="radio" name="check-btn" id="btn-4" />
-			<a href="#btn4">navbar4</a>
-			<input type="radio" name="check-btn" id="btn-5" />
-			<a href="#btn5">navbar5</a>
-
-			<div class="scroll-con" title="con">
-				<section class="sc-panel" id="btn1">
-					<div class="tb" data-icon="H"></div>
-					<h2>container1</h2>
-					<p>container1 container1 container1 container1 container1 container1 container1 container1 container1</p>
-				</section>
-				<section class="sc-panel bg-color" id="btn2">
-					<div class="tb" data-icon="2"></div>
-					<h2>container2</h2>
-					<p>container1 container1 container1 container1 container1 container1 container1 container1 container1</p>
-				</section>
-				<section class="sc-panel" id="btn3">
-					<div class="tb" data-icon="3"></div>
-					<h2>container3</h2>
-					<p>container1 container1 container1 container1 container1 container1 container1 container1 container1</p>
-				</section>
-				<section class="sc-panel bg-color" id="btn4">
-					<div class="tb" data-icon="X"></div>
-					<h2>container4</h2>
-					<p>container1 container1 container1 container1 container1 container1 container1 container1 container1</p>
-				</section>
-				<section class="sc-panel" id="btn5">
-					<div class="tb" data-icon="C"></div>
-					<h2>container5</h2>
-					<p>container1 container1 container1 container1 container1 container1 container1 container1 container1</p>
-				</section>
-			</div>
+	    <h1>Mrs.MuLinson</h1>
+		<ul id="header">
+			<li><a href="mulinson/index.html">MuLinson</a></li>
+			<li><a href="##" id="btn_ebt">Exhibition</a></li>
+			<li><a href="notes/index.html" target="_blank">Notes</a></li>
+		</ul>
+		<div id="input_btn">
+			<input value="" type="password" placeholder="主银说访问要密钥嗷" id="inputpsd"><br/>
+			<a href="##"><input type="button" value="提交" id="btn" style="cursor:pointer"></a>
+			<div id="come_in"><a href="exhibition/index.html" id="a_come">进入</a></div>
 		</div>
-
 	</div>
 </body>
+<script type="text/javascript">
+	window.onload = function (){
+		var btn_ebt = document.getElementById("btn_ebt");
+		var input_btn = document.getElementById("input_btn");
+		var btn = document.getElementById("btn");
+		var a_come = document.getElementById("a_come");
+		var inputpsd = document.getElementById("inputpsd");
+		var condition = true;
+		var password = 'huangfeng';
+		var showTime = document.getElementById("showTime").getElementsByTagName("li");
+		var header = document.getElementById("header").getElementsByTagName("li");
+		var showMessage = document.getElementById("showMessage").getElementsByTagName("li");
+	
+	// 介绍说明的显示与隐藏	
+                for(var i = 0;i<header.length;i++){
+                     (function(i){
+                     	header[i].onmouseover = function(){
+                     		showMessage[i].style.display = 'block';
+                     	}
+                      	header[i].onmouseout = function(){
+                     		showMessage[i].style.display = 'none';
+                     	}                    
+                     })(i);
+                }
+
+		// 获取系统时间
+
+		setInterval(function(){
+			var date = new Date();
+			var year = date.getFullYear();
+			var month = date.getMonth();
+			var day = date.getDate();
+			var hours = date.getHours();
+			var minute = date.getMinutes();
+			var secound = date.getSeconds();
+			month += 1;
+			showTime[0].innerHTML = year + '/' + month + '/' + day;
+			showTime[1].innerHTML = hours + ':' + minute + ':' + secound;
+		},1000);
+
+		// 密码验证
+
+		btn_ebt.onclick = function(){
+			if (condition) {
+				input_btn.style.display = 'block';
+				condition = false;
+			} else {
+				input_btn.style.display = 'none';
+				condition = true;
+			};
+			
+		}
+		btn.onclick = function(){
+			var val = inputpsd.value;
+			var come_in = document.getElementById("come_in");
+			// console.log(inputpsd);
+			if(val == password){
+				come_in.style.display = 'block';
+			} else{
+				inputpsd.value = '';
+				come_in.style.display = 'none';
+				alert("主银说密码不对哦！");
+
+			}
+		}
+		a_come.onclick = function (){
+			come_in.style.display = 'none';
+		}		
+	}
+</script>
 </html>
