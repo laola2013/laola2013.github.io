@@ -117,6 +117,8 @@ body
 .header_title h3
 {
 	font-weight: 500;
+	position: relative;
+	opacity: 0;
 }
 .con>a:hover
 {

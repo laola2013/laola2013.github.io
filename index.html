@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE-edga,chrome=1">
-	<meta name="viewport" content="width=device-width ,initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>MuLinson.Blog</title>
 	<link rel="icon" href="img/logo.jpg" type="image/x-icon">
 	<link rel="stylesheet" href="style/swiper-3.2.7.min.css">
@@ -115,6 +115,14 @@
 		  spaceBetween: 0,
 		  mousewheelControl: true,
 		})
+	})
+	$(document).ready(function() {
+		if(!$("header h1").is(":animated")){
+			$("header h1").animate({left: "300", opacity:"0.15"}, 600)
+						  .animate({left: "0", opacity:"1"}, 450);
+			$("header h3").animate({left: "-300", opacity:"0.15"}, 600)
+						  .animate({left: "0", opacity:"1"}, 450);
+		}
 	})
 </script>
  </body>
