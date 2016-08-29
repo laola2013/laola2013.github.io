@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE-edga,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Document</title>
+	<link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+	<div class="container">
+		<figure class="cloudy"></figure>
+		<figure class="cloudy1"></figure>
+		<figure class="flower1 flower"></figure>
+		<figure class="flower2 flower"></figure>
+		<figure class="flower3 flower"></figure>
+		<figure class="lu luMoveon" id="lu"></figure>
+		<figure class="" id="xf"></figure>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/transition.js"></script>
+<script type="text/javascript" src="js/animation.js" defer></script>
+<script type="text/javascript">
+	var docEl = document.documentElement;
+	var resize = "orientationchange" in window? "orientationchange": "resize";
+	function resetSize() {
+		var clientWidth = docEl.clientWidth;
+		if(!clientWidth) return;
+		docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	}
+	window.addEventListener(resize, resetSize, false);
+	document.addEventListener("DOMContentLoaded", resetSize, false);
+</script>
+<script type="text/javascript">
+
+</script>
+</html>

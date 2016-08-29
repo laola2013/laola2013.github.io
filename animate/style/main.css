@@ -1,0 +1,187 @@
+html, div, figure {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.cloudy {
+	width: 1.6em;
+	height: 0.8em;
+	position: absolute;
+	background-image: url(../img/cloud.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	left: 3em;
+	top: 0.6em;
+	animation: cloudyAni 5s ease-in-out infinite;
+	-webkit-animation: cloudyAni 5s ease-in-out infinite;
+}
+@keyframes cloudyAni {
+	0%{
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-0.1em);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@-webkit-keyframes cloudyAni {
+	0%{
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-0.1em);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+.cloudy1 {
+	width: 2.4em;
+	height: 1.2em;
+	position: absolute;
+	background-image: url(../img/cloud1.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	top: 0em;
+	left: 4.5em;
+	animation: _cloudyAni 5s ease-in-out infinite;
+	-webkit-animation: _cloudyAni 5s ease-in-out infinite;
+}
+@keyframes _cloudyAni {
+	0%{
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(0.1em);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@-webkit-keyframes _cloudyAni {
+	0%{
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(0.1em);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+.flower {
+	position: absolute;
+	background-image: url(../img/fc.png);
+	background-repeat: no-repeat;
+	background-size: 200% 100%;
+}
+
+.flower1 {
+	height: 1.8em;
+	width: 0.9em;
+	left: 1em;
+	bottom: 0.5em;
+	animation: flowerOne 1.5s steps(2) infinite;
+	-webkit-animation: flowerOne 1.5s steps(2) infinite;
+}
+.flower2 {
+	height: 1.8em;
+	width: 0.9em;
+	left: 0.2em;
+	bottom: 1em;
+	animation: flowerOne 1.5s steps(2) infinite;
+	-webkit-animation: flowerOne 1.5s steps(2) infinite;
+}
+.flower3 {
+	height: 1.8em;
+	width: 0.9em;
+	left: 1.5em;
+	bottom: 1.5em;
+	animation: flowerOne 1.5s steps(2) infinite;
+	-webkit-animation: flowerOne 1.5s steps(2) infinite;
+}
+@keyframes flowerOne {
+	0% {
+		background-position: 100% 0%;
+	}
+	100% {
+		background-position: -100% 0%;
+	}
+}
+@-webkit-keyframes flowerOne {
+	0% {
+		background-position: 100% 0%;
+	}
+	100% {
+		background-position: -100% 0%;
+	}
+}
+.lu {
+	height: 1.8em;
+	width: 1.5em;
+	position: absolute;
+	right: 0.8em;
+	top: 1em;
+	background-image: url(../img/lu.png);
+	background-size: 400% 100%;
+	transform: scale(0.1);
+	
+
+}
+.luMoveon {
+	animation: luAni .8s steps(3, end) infinite;
+	-webkit-animation: luAni .8s steps(3, end) infinite;
+}
+@keyframes luAni {
+	0% {
+	    background-position: -0% 100%;
+	}
+	100% {
+	    background-position: -300% 100%;
+	}
+}
+@-webkit-keyframes luAni {
+	0% {
+	    background-position: -0% 100%;
+	}
+	100% {
+	    background-position: -300% 100%;
+	}
+}
+
+.xf {
+	height: 4em;
+	width: 6em;
+	position: absolute;
+	background-image: url(../img/xf.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	/*transform: scale(0.1);*/
+	/*opacity: 0;*/
+	top: 3em;
+	right: 5em;
+}
+.xfAni {
+	animation: xfAnim 2s;
+}
+@keyframes xfAnim {
+	0% {
+		opacity: 0;
+		transform: scale(0.1);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
