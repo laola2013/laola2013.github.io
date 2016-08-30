@@ -1,0 +1,158 @@
+body{
+	  margin: 0;
+      font-family: '微软雅黑';
+      background-color: #ac6680;
+
+
+}
+
+li{
+	list-style: none;
+
+}
+a{
+	text-decoration: none;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+.header-nav{
+    position: fixed; top: 0;z-index: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #eee;
+}
+
+
+.nav-name{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    float: left;
+	margin-left: 35%;
+	font-size: 25px;
+	line-height: 60px;
+	color: #aaa;
+}
+.header-nav>.nav-name>span{
+	font-size: 15px;
+	line-height: 60px;
+}
+.nav-pho{
+	width: 100%;
+}
+
+.pho{
+	width: 50px;
+	height: 50px;
+	float: left;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-top: 4px;
+}
+.container{
+	padding: 10px;
+	width: 100%;
+	height: 1188px;
+	background-image: url(../img/39.jpg);
+    background-repeat: no-repeat;
+}
+.box{
+	margin: 0px auto;
+	
+	margin-top: 60px;
+	padding: 5px 5px;
+	height: 438px;
+	width: 960px;
+	background-color: rgba(255,255,255,0.3);
+}
+.box1{
+	margin-right: 15px;
+	float: left;
+	width: 102px;
+	height: 120px;
+}
+.box-pho{
+	float: left;
+	width: 100px;
+	height: 100px;
+	border-radius: 8px;
+	overflow: hidden;
+
+}
+.box-title{
+	height: 17px;
+	width: 98px;
+	float: left;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    margin-top: 2px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+.box-nav{
+    margin-top: 3px;
+	float: left;
+}
+.box-nav>ul>li{
+	margin-top: 5px;
+}
+
+.box-nav>ul>li>a{
+	display: block;
+	padding: 10px;
+	font-size: 15px;
+	color: #fff;
+	background-color: #f36896;
+    /*filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    opacity: 0.8;（设置透明度）*/
+}
+.box-nav>ul>li>a:hover{
+	background-color: #fff;
+	color: #f36896;
+}
+.box-nav>ul>li.active>a{
+	cursor: not-allowed;
+	background-color: transparent;
+    color:#fff;
+    border-bottom:1px solid #fff;  
+}
+.box2{
+	width: 960px;
+	height: 320px;
+	padding: 5px;
+	background-color: rgba(255,255,255,0.3);
+	margin: 10px auto;
+}
+.box3{
+	width: 960px;
+	height: 320px;
+	padding: 5px;
+	background-color: rgba(255,255,255,0.3);
+	margin: 10px auto;
+}
+.box4{
+	padding: 10px 0;
+	height: 40px;
+	background-color: #EEE;
+	text-align: center;
+	
+}
+.box4>ul>li{
+	float: left;
+	color: #aaa;
+	font-size: 15px;
+	line-height: 40px;
+}
+
+
+
+.box4>.box4-ul{
+	height: 40px;
+	width: 960px;
+    margin: 0px auto;
+    
+ }

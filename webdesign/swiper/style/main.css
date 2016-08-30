@@ -1,0 +1,147 @@
+@font-face{
+	font-family: "Raphaelicons";
+	src: url(fonts/raphaelicons-webfont.eot) format("eot"),
+		 url(fonts/raphaelicons-webfont.woff) format("woff"),
+		 url(fonts/raphaelicons-webfont.ttf) format("tff"),
+		 url(fonts/raphaelicons-webfont.svg) format("svg");
+	font-weight: normal;
+	font-style: none;
+}
+body
+{
+	font-family: '微软雅黑';
+}
+*,*::after,*::before
+{
+	box-sizing: inherit;
+}
+.section
+{
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: inherit;
+	height:100%;
+	width: 100%;
+}
+
+/* first_section样式 */
+.wrapper
+{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.container{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+.first_section
+{
+	background-image: url(../img/bg1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+[data-icon]:after
+{
+	content: attr(data-icon);
+	height: 80px;
+	width: 100%;
+	display: block;
+	font-size: 80px;
+	color: #fff;
+	font-family: "Raphaelicons";
+}
+.second_section
+{
+	background-image: url(../img/bg2.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.third_section
+{
+	background-image: url(../img/bg3.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.fourth_section
+{
+	background-image: url(../img/bg4.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.fifth_section
+{
+	background-image: url(../img/bg5.jpg);
+	background-repeat: no-repeat;
+	/*background-size: 100% auto;*/
+	background-position: center;
+}
+.header_title
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-grow: 1;
+	margin-left: 10%;
+	color: #FFF;
+	/*padding-right: 150px;*/
+}
+.con
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.con>a
+{
+	width: 50%;
+	height: auto;
+	background-color: rgba(0,0,0,.45);
+	transition: all 0.6s;
+	display: inline-block;
+	padding: 35px;
+	box-sizing: border-box;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 26px;
+	text-indent: 2em;
+}
+.header_title h1,
+.header_title h3
+{
+	font-weight: 500;
+}
+.con>a:hover
+{
+	background-color: rgba(0,0,0,.68);
+}
+
+@media screen and (max-width: 540px) and (min-width: 0){
+	.con>a{
+		font-size: 10px;
+		padding: 10px;
+		line-height: 18px;
+		width: 100%;
+		margin: 0 !important;
+	}
+	.header_title h1{
+		font-size: 18px;
+	}
+	.header_title h3{
+		font-size: 14px;
+	}
+	[data-icon]:after{
+		font-size: 45px;
+	}
+	.header_title{
+		padding: 45px 0;
+	}
+}

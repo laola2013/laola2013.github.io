@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style/css1.css">
+		
+	</head>
+
+</script>	
+
+	<body>
+		<div id="ad">
+			<img id="adpic" src="img/28.jpg">
+		</div>
+		<div class="header-nav">
+		        <div class="nav-name">
+				     Mrs.MuLinSon...<span><木林森小姐></span>
+				</div>
+				<div class="pho">
+				     <img src="img/1.jpg" class="nav-pho">
+				</div>
+		</div>
+	<div class="box">
+		<div class="box1">
+			<div class="box-pho">
+				<img src="img/4.jpg" style="width:100%">
+			</div>
+				<div class="box-title">
+				     <p style="text-align:center">Mrs.MuLinSon</p>
+				</div>
+			<div class="box-nav">
+				<ul>
+					<li><a href="../../index.html" class="home">首页</a></li>
+				    <li><a href="##" class="active">主打之歌</a></li>
+				    <li>
+				    <a href="myself.html" class="nav">我的自己</a>
+				    </li>
+					<li>
+					<a href="photos.html" target="_blank" class="nav">画丫画丫</a>
+					</li>
+					<li>
+					<a href="mylove.html" class="nav">杂七杂八</a>
+					</li>
+					<li>
+					<a href="we.html" class="nav">我和Ta们</a>
+					</li>
+					<li>
+					<a href="heart.html" target="_blank" class="nav">
+					我说他说
+					</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+            <div class="box-pho1">
+				<img src="img/7.jpg" style="width:100%">
+				<p style="margin-top:5px">
+				<strong>
+				Do  You  Like  Yourself  Right  Now ?
+				</strong>
+				</p>
+			</div>
+			
+	</div>
+	<div class="box2">
+		<div class="box2-pho">
+		   <div class="box2-pho1"><img src="img/8.jpg"></div>
+		    <div class="box2-text">
+		     <p>一不小心就长大了，还是很质疑我真的是二十出头的大菇凉吗？依旧一脸稚气，所以到哪都被叫做小朋友，关于小时候天马行空的幻想，而如今的自己便是答案了。
+		     <p>你喜欢现在的自己吗？不喜欢，可却在默默的接受，心想着要改变啊改变啊...(事实上多半是以哭脸告终的)唯一不同的是没有了许多奇奇怪怪的想法。(可是却常常在某几件事里纠结呀徘徊啊，这大概是一种病吧)</p>
+		     <p>然而所谓的幸福变得很简单起来：年轻的时候做自己想做的事，常常呆在亲近的人身边，偶尔出去和死党们疯闹；中年的时候和自己爱的人去四处旅游；晚年的时候大概只需要一个温暖的臂膀吧...</p>
+			</div>
+		</div>
+    </div>
+    <div class="box5">
+        	<div class="box5-con">
+    		<div class="box5-pho">
+    			<img src="img/9.jpg">
+    		</div>
+    		<div class="box5-text">
+    		<p>一不小心就长大了，还是很质疑我真的是二十出头的大菇凉吗？依旧一脸稚气，所以到哪都被叫做小朋友，关于小时候天马行空的幻想，而如今的自己便是答案了。</p>
+		     <p>你喜欢现在的自己吗？不喜欢，可却在默默的接受，心想着要改变啊改变啊...(事实上多半是以哭脸告终的)唯一不同的是没有了许多奇奇怪怪的想法。(可是却常常在某几件事里纠结呀徘徊啊，这大概是一种病吧)</p>
+		     <p>然而所谓的幸福变得很简单起来：年轻的时候做自己想做的事，常常呆在亲近的人身边，偶尔出去和死党们疯闹；中年的时候和自己爱的人去四处旅游；晚年的时候大概只需要一个温暖的臂膀吧...</p>
+    		</div>
+    	</div>
+    </div>
+		<div class="box3">
+			<img src="img/1.png"style="width:350px;">
+			<img src="img/1.png"style="width:250px;">
+			<img src="img/1.png"style="width:150px;">
+		</div>
+		<div class="box4">
+			<ul class="box4-ul">
+				<li style="height: 35px;">
+					<img src="img/2.png" style="height:100%">
+				</li> 
+				<li style="margin-left:5px">WeChatId:laola2013</li>
+				<li style="float:right;height: 35px;">
+					<img src="img/3.png" style="height:100%">
+				</li>
+				<li style="float:right;margin-right:5px">QQ:850875418</li>
+			</ul>
+		</div>
+	</body>
+<script type="text/javascript">
+		var ad = document.getElementById('ad');
+		var adpic = document.getElementById('adpic');
+		var h = 0;
+		var maxh = adpic.height;
+		function down(){
+			if(h<maxh){
+            	h += 8;
+                setTimeout(down,10);
+            }else{
+            	setTimeout(up,2000);
+            }
+            	ad.style.height = h + 'px';
+            	ad.style.display='block';
+		}
+		function up(){
+			if(h>0){
+				h -= 8;
+            	ad.style.height = h + 'px';
+				setTimeout(up,10);
+			}
+		}
+		setTimeout(down,2000);
+</script>
+</html>
