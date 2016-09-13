@@ -11,6 +11,9 @@
 	}
 	body {
 		background-color: #000;
+		background-image: url(img/bg.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
 	}
 </style>
 <body>
@@ -58,9 +61,10 @@
 	}
 	function draw() {
 		ctx.clearRect(0, 0, _width, _height);
+		// background();
 		for(var i=0; i<num; i++) {
 			var o = star[i];
-			var r = random(1, 15);
+			var r = random(1, 10);
 			// var r = (_width > _height ? _width : _height) / 30;
 			ctx.beginPath();
 			ctx.arc(o.x, o.y, r, 0, Math.PI*2, true);
@@ -74,19 +78,30 @@
 			o.x += 1;
 			o.x = o.x > _width ? 0 : o.x;
 		}
+
 	}
-	stars();
+	// function background() {
+	// 	var url = "img/bg.jpg";
+	// 	var img = new Image();
+	// 	img.onload = function() {
+	// 		ctx.drawImage(img, 0, 0);
+	// 	}
+	// 	img.src = url;
+	// }
 	// draw();
 	function autoPlay() {
 		timer = setInterval(function() {
 			draw();
-		}, 100);
+		}, 90);
 	}
 	function stopPlay() {
 		clearInterval(timer);
 	}
+	
 	canvas.onmouseover = stopPlay;
 	canvas.onmouseout = autoPlay;
 	autoPlay();
+	stars();
+	// background();
 </script>
 </html>
