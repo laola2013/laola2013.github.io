@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>漫天星星</title>
+</head>
+<style>
+	html, body, canvas{
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background-color: #000;
+	}
+</style>
+<body>
+	<canvas id="canvas"></canvas>
+</body>
+<script>
+	function $(s) {
+		return document.querySelectorAll(s);
+	}
+	var canvas = $("#canvas")[0];
+	var _height = document.documentElement.clientHeight;
+	var _width = document.documentElement.clientWidth;
+	console.log(_width);
+	canvas.width = _width;
+	canvas.height = _height;
+	var star = [];
+	var num = 200;
+	var timer = null;
+	var ctx = canvas.getContext("2d");
+	// ctx.moveTo(0, 0);
+	// ctx.lineTo(_width, 0);
+	// ctx.lineTo(_width, _height);
+	// ctx.lineTo(0, _height);
+	// ctx.lineTo(0, 0);
+	// ctx.fillStyle = "#000";
+	// ctx.fill();
+	function random(m, n) {
+		return Math.round(Math.random() * (n - m) + m);
+	}
+
+	function stars() {
+		star= [];
+		for(var i=0; i<num; i++) {
+			var x = random(0, _width);
+			var y = random(0, _height);
+			var dx = random(1, 3)
+			var color = "rgba(" + random(0, 255) + "," + random(0, 255) + "," + random(0, 255) + ",0)";
+			star.push({
+				x: x,
+				y: y,
+				dx: dx,
+				color: color
+			});
+		}
+	}
+	function draw() {
+		ctx.clearRect(0, 0, _width, _height);
+		for(var i=0; i<num; i++) {
+			var o = star[i];
+			var r = random(1, 10);
+			// var r = (_width > _height ? _width : _height) / 30;
+			ctx.beginPath();
+			ctx.arc(o.x, o.y, r, 0, Math.PI*2, true);
+			// ctx.strokeStyle = "#fff";
+			// ctx.stroke();
+			var g = ctx.createRadialGradient(o.x, o.y, 0, o.x, o.y, r);
+			g.addColorStop(0, "#fff");
+			g.addColorStop(1, o.color);
+			ctx.fillStyle = g;
+			ctx.fill();
+			o.x += 1;
+			o.x = o.x > _width ? 0 : o.x;
+		}
+	}
+	stars();
+	// draw();
+	function autoPlay() {
+		timer = setInterval(function() {
+			draw();
+		}, 100);
+	}
+	function stopPlay() {
+		clearInterval(timer);
+	}
+	canvas.onmouseover = stopPlay;
+	canvas.onmouseout = autoPlay;
+	autoPlay();
+</script>
+</html>
